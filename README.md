@@ -2,4 +2,6 @@
 ** Fundacion Puerta 18 **
 
 ## Integrantes del proyecto
-**Integrantes del proyecto: 
+-Esteban Acosta  
+-Francisco Martín  
+-Nazareno Pacheco  

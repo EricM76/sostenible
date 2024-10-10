@@ -4,5 +4,5 @@
 ## Integrantes del proyecto
 -Esteban Acosta  
 -Francisco Martín  
--Nazareno Pacheco 
+-Nazareno Pacheco  
 -Yamila Lujan

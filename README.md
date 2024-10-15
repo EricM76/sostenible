@@ -6,5 +6,3 @@
 -Francisco Martín  
 -Nazareno Pacheco  
 -Yamila Lujan
-
-### Nombre de integrante

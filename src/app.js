@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = 3000;
 
-const indexRoutes = require('./routes/index.routes');
+const indexRoutes = require('./routes/index.routes.js');
 
 
 //configuración de los recursos estáticos

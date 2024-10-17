@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro</title>
+</head>
+
+<body class="register">
+  <header></header>
+  <main>
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Registro</h4>
+        <!-- Formulario para registrarse -->
+        <form>
+          <!-- input Nombre Completo -->
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre Completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu nombre completo"
+              required />
+            <p class="form-text alert-hide">Obligatorio</p>
+          </div>
+          <!-- input Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Ingresá tu correo" required />
+            <p class="form-text alert-hide">Obligatorio</p>
+          </div>
+          <!-- input Contraseña -->
+          <div class="mb-3">
+            <label for="passsword" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passsword" name="passsword"
+              placeholder="Ingresá una contraseña" value="" required />
+            <p class="form-text alert-hide">Obligatorio</p>
+          </div>
+          <button type="submit" class="btn btn-primary">Registrarme</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

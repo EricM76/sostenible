@@ -23,4 +23,4 @@ app.use('/', indexRoutes);
 app.use('/podcast',podcastRoutes);
 app.use('/contacto',contactRoutes);
 
-app.listen(PORT, () => 'Servidor corriendo en http://localhost:' + PORT)
+app.listen(PORT, () => console.log('Servidor corriendo en http://localhost:' + PORT))

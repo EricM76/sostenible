@@ -7,6 +7,10 @@ const PORT = 3000;
 const indexRoutes = require('./routes/index.routes.js');
 const podcastRoutes = require('./routes/podcast.routes.js');
 const contactRoutes = require('./routes/contacto.routes.js');
+const adminRoutes = require('./routes/admin.routes.js');
+const webinarRoutes = require ('./routes/webinar.routes.js');
+const plantandoRoutes = require('./routes/plantando.routes.js');
+const hubRoutes = require('./routes/hub.routes.js');
 
 //configuración de los recursos estáticos
 app.use(express.static(path.join(__dirname,'..', 'public')));
@@ -22,5 +26,9 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use('/', indexRoutes);
 app.use('/podcast',podcastRoutes);
 app.use('/contacto',contactRoutes);
+app.use('/admin', adminRoutes);
+app.use('/webinar', webinarRoutes);
+app.use('/plantandofuturo', plantandoRoutes);
+app.use('/hubrecircular', hubRoutes);
 
 app.listen(PORT, () => 'Servidor corriendo en http://localhost:' + PORT)

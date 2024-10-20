@@ -1,4 +1,4 @@
-const {getData} = require ('../data')
+const path = require ('path')
 
 module.exports = {
     lista : (req,res) => {

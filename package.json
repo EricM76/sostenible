@@ -8,7 +8,6 @@
   "description": "** Fundacion Puerta 18 **",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon -w src/app.js",

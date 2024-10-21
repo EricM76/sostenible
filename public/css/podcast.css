@@ -1,22 +1,78 @@
 body {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
-    background-image: url('../img/podcast/StockCake-Sunset\ microphone\ field_1729473312.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
+    background-image: url('../img/podcast/microfono\ celular.jpg');
+    background-size: cover;
+    background-repeat:repeat;
     position: relative;
 }
 
-.description__title h1 {
-    color: var(--color-azul);
+.description__title {
+    color: #f2f2f2;
     text-align: center;
     text-transform: uppercase;
-    font-family: "Montserrat", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 250%;
+    margin: 0 10% 0 10%;
+    padding: 5%;
+    font-weight: 400;
 }
 
-.episode div{
-    float: left;
-	width: 800px;
-	background-color: #fff;
-	overflow: hidden;
-	margin-right: 20px;
+.description__title p {
+    font-size: 150%;
+    font-weight: 500;
+    text-align:center
+}
+
+.description__box {
+    margin: 3%;
+    border-radius: 12px;
+    padding: 3%;
+    font-weight: 400;
+}
+
+.description__box--item {
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+}
+
+.description__box--item i {
+    font-size: 400%;
+    color: #f2f2f2;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 50%;
+    padding: 10%
+}
+
+.description__box div {
+    color: #f2f2f2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5%;
+    font-size: x-large;
+    font-weight: 300;
+}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+}
+
+.episode div {
+    margin: 1% 3% 8% 3%;
+    background-color: rgba(75, 141, 127, 0.5);
+    border-radius: 15px;
+}
+
+.episode p {
+    color: #f2f2f2;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 0 3% 0;
+    text-align: center;
+}
+
+iframe {
+    margin: 0 0 -15% 0;
+    padding: 0;
 }

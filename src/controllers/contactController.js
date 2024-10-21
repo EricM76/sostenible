@@ -1,7 +1,7 @@
 const path = require ('path')
 
 module.exports = {
-    podcast : (req,res) => {
+    contacto : (req,res) => {
 
         return res.render('contacto')},
 }

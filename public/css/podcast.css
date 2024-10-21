@@ -1,0 +1,22 @@
+body {
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+    background-image: url('../img/podcast/StockCake-Sunset\ microphone\ field_1729473312.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.description__title h1 {
+    color: var(--color-azul);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
+.episode div{
+    float: left;
+	width: 800px;
+	background-color: #fff;
+	overflow: hidden;
+	margin-right: 20px;
+}

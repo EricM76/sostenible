@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
 </head>
-<body>
-    
+
+<body class="login">
+    <header></header>
+    <main>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Login</h4>
+                <!-- Formulario para logearse -->
+                <form>
+                    <!-- input Email -->
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ingresá tu correo"
+                            required />
+                        <p class="form-text alert-hide">Obligatorio</p>
+                    </div>
+                    <!-- input Contraseña -->
+                    <div class="mb-3">
+                        <label for="passsword" class="form-label">Contraseña</label>
+                        <input type="password" class="form-control" id="passsword" name="passsword"
+                            placeholder="Ingresá una contraseña" value="" required />
+                        <p class="form-text alert-hide">Obligatorio</p>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
 </body>
+
 </html>

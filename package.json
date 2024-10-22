@@ -8,6 +8,9 @@
   "description": "** Fundacion Puerta 18 **",
   "version": "1.0.0",
   "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.4.14"
+  },
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon -w src/app.js",

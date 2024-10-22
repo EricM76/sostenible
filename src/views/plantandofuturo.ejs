@@ -1,21 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
-<%- include('./partials/head') %>
-<body>
+<head>
+    <%- include('./partials/head',{
+		title : 'Plantando Futuro'
+	}) %>
+</head>
+<body class="plantando__body">
     <%- include('./partials/header') %>
         <main>
-            <section class="title">
-                <h1 class="title">REVIVE EL CÍCLO DE CONEXIÓN CIRCULAR EN SPOTIFY</h1>
-                <article class="description">
-                    <div> Escucha nuestro podcast "Conexión Circular" y aprende más sobre la Economía Circular</div>
+            <section class="plantando__description">
+                <div class="title__flex--laptop">
+                    <h1 data-aos="fade-up" class="plantando__description--title">PLANTANDO <p>FUTURO</p></h1>
+                    <p data-aos="fade-up" class="box__item--tree">
+                        <i class="fa-solid fa-tree"></i>
+                        </p>
+                </div>
+                <h2 data-aos="fade-up" class="plantando__description--title">¿QUÉ ES PLANTANDO FUTURO?</h2>
+                <article class="plantando__check--box" data-aos="fade-right">
+                    <div class="check__description" data-aos="fade-right"> Plantando Futuro es un programa de forestación urbana que busca...</div>
+                    <div class="column__container">
+                            <div class="row__container" data-aos="fade-up">
+                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
+                                <div><p>Incrementar y consolidar el arbolado urbano</p></div>
+                            </div>
+                            <div class="row__container" data-aos="fade-up">
+                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
+                                <div><p>Promover la conciencia ambiental y la reconexión con la naturaleza</p></div>
+                            </div>
+                            <div class="row__container" data-aos="fade-up">
+                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
+                                <div><p>Mejorar la calidad de vida de los vecinos mediante la generación de un entorno más verde y saludable</p></div>
+                            </div>
+                    </div>
                 </article>
             </section>
-            <section class="episode">
-                <div> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6d1YYwXn05L0f7UEYGFIpU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> </div>
-                <div> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6O5R6rGZ3cla3YNhd8IKiE?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> </div>
-                <div> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/7ycQTitSaP7c0lntUXkjAh?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> </div>
-            </section>
+            <div class="stats__container">
+                <h2 data-aos="fade-up" class="plantando__description--title">NUESTROS LOGROS</h2>
+                <div class="stats__box">
+                    <div class="stats__column">
+                        <div class="stats__row" data-aos="fade-right">
+                            <div class="stat-description">
+                                La iniciativa, impartida en actividades para la comunidad, hizo que se planten más de 600 árboles en la ciudad de Córdoba y localidades cercanas
+                            </div>
+                            <div class="stat"> 
+                                <div class="arbol-odometer">600</div>
+                                <div class="arbol-type">Arboles plantados</div>
+                            </div>
+                        </div>
+                        <div class="stats__row" data-aos="fade-left">
+                            <div class="stat"> 
+                                <div class="arbol-type">Más de</div>
+                                <div class="arbol-odometer">500</div>
+                                <div class="arbol-type">Arboles por plantar</div>
+                            </div>
+                            <div class="stat-description">
+                                Se logró la restauración y puesta en marcha de viveros para la producción de nativas, 
+                                que hoy en día cuenta con un stock de <strong>500</strong> árboles a la espera de ser plantados
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 data-aos="fade-up" class="plantando__description--title">ÚLTIMAS ACTIVIDADES</h2>
+            <article class="plantando__actividades--box" data-aos="fade-left">
+                <div class="plantando__actividades--description" data-aos="fade-left"> ¡No te pierdas las últimas novedades del proyecto!
+                </div>
+                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
+                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
+                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
+            </article>
         </main>
+
+        <script src="/javascript/odometer.js"></script>
+
+        <script>
+
+            const arbolOdometer = document.querySelector('.arbol-odometer')
+
+            const odometer = new Odometer({
+                el:arbolOdometer,
+            })
+
+            odometer.update (600);
+
+        </script>
     <%- include('./partials/footer') %>
 </body>
 </html>

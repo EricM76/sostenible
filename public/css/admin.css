@@ -1,3 +1,28 @@
 .admin {
-    
+    background-color: var(--color_blanco);
+    font-family: Roboto;
+    margin: 20px 20px;
 }
+
+/* Menu de nav */
+.nav_menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/* Novedades */
+.novedades_header {
+    display: flex;
+}
+
+.novedades {
+    margin: 10px 10px;
+}
+
+.novedades_title {
+    font-weight: 600;
+}
+
+/* Contadores */
+/*  */

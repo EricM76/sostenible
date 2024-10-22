@@ -1,5 +1,5 @@
 .podcast__body {
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.8);
+    box-shadow: inset 0 0 0 3000px rgba(0,0,0,.8);
     background-image: url('../img/podcast/microfono\ celular.jpg');
     background-size: cover;
     background-repeat:repeat;

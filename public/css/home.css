@@ -1,4 +1,4 @@
-*{
+.home{
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
@@ -11,6 +11,7 @@
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative;
 }
 .home--phrase::before {
     content: '';
@@ -430,7 +431,7 @@ a:hover{
     .card--projects a{
         position: absolute;
         bottom: 1px;
-        left: 110px;
+        left: 80px;
     }
     .partners h1{
         font-size: 2em;
@@ -438,9 +439,12 @@ a:hover{
     .partners img{
         width: 150px;
     }
-    .home--projects{
-        border-top: solid 10px #000000;
-        border-bottom: solid 10px #000000;
+    .home section{
+        border-top: solid 2px #000000;
+        border-bottom: solid 2px #000000;
+    }
+    .home--phrase {
+        border-top: solid  +2px #000000
     }
 }
 @media (min-width: 1440px){
@@ -448,6 +452,6 @@ a:hover{
         left: 41%;
     }   
     .card--projects a{
-        left: 120px;
+        left: 125px;
     }
 }

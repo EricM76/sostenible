@@ -1,48 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrador</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/4d0854c030.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="admin">
+    <!-- Cabecera del sitio -->
     <header></header>
+    <!-- Sitio del admin -->
     <main>
         <!-- Nav de Register | Login -->
-         <div class="nav_menu">
+        <div class="nav_menu">
             <a href="/admin/register" class="register">Registrarse</a>
             <a href="/admin/login" class="login">Login</a>
-         </div>
-        <!-- Section de Novedades -->
-        <section class="novedades">
+        </div>
+        <!-- Sección de Novedades -->
+        <section class="section_novedades">
             <div class="novedades_header">
-                <h3 class="novedades_title">Novedades</h3>
+                <h2 class="novedades_title">Novedades</h2>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button class="btn btn-primary me-md-2" type="button">Añadir</button>
+                    <button class="btn btn-primary me-md-2" type="button">Añadir</button>
                 </div>
             </div>
             <!-- Novedades -->
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Titulo</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <i class="fa-solid fa-gear"><a href="#"></a></i>
-                  <button type="button" class="btn btn-danger">Eliminar</button>
+             <article class="cards_novedades">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="box--card_img">
+                            <img src="https://pic.pnnet.dev/50x50?text=...&tc=white&bgc=grey" class="card-img-top"
+                                alt="Imagen de la novedad">
+                        </div>
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <div class="box--card_botones">
+                            <div class="boton_editar">
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                            </div>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="box--card_img">
+                            <img src="https://pic.pnnet.dev/50x50?text=...&tc=white&bgc=grey" class="card-img-top"
+                                alt="Imagen de la novedad">
+                        </div>
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <div class="box--card_botones">
+                            <div class="boton_editar">
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                            </div>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="box--card_img">
+                            <img src="https://pic.pnnet.dev/50x50?text=...&tc=white&bgc=grey" class="card-img-top"
+                                alt="Imagen de la novedad">
+                        </div>
+                        <h5 class="card-title">Titulo</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                            card's content.</p>
+                        <div class="box--card_botones">
+                            <div class="boton_editar">
+                                <a href="#">
+                                    <i class="fa-solid fa-gear"></i>
+                                </a>
+                            </div>
+                            <button type="button" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+             </article>
         </section>
-        <!-- Section de Contadores -->
-        <section>
-            <h2>Contadores</h2>
-            <div>
-                <img src="..." alt="...">
-                <i class="fa-solid fa-plus"></i>
+        <!-- Sección de Contadores -->
+        <section class="section_contadores">
+            <div class="contadores_header">
+                <h2 class="contadores_title">Contadores</h2>
+            </div>
+            <!-- Contadores -->
+            <article class="box_contadores">
+                <div class="box_contador">
+                    <img src="https://pic.pnnet.dev/300x200?text=...&tc=white&bgc=grey" alt="imagen de contador">
+                    <div class="boton-agregar_contador">
+                        <a href="" role="button"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <!-- Sección para Añadir -->
+        <section class="section_add">
+            <div class="add_header">
+                <h3 class="add_title">Añadir</h3>
+            </div>
+            <div class="add_opciones">
+                <ul type="none">
+                    <li><a href="#"><i class="fa-solid fa-plus"></i>Añadir capacitacion</a></li>
+                    <li><a href="#"><i class="fa-solid fa-plus"></i>Añadir evento</a></li>
+                    <li><a href="#"><i class="fa-solid fa-plus"></i>Añadir actividad</a></li>
+                </ul>
             </div>
         </section>
     </main>
+    <!--  Pie del sitio -->
     <footer></footer>
 </body>
+
 </html>

@@ -1,11 +1,177 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include('./partials/head',{
+  title : 'Home'
+}) %>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <body>
-    <a href="/podcast">Podcast</a>
+
+  <%- include('./partials/header') %>
+<main>
+  <body class="home">
+    <section class="home--phrase" id="up">
+      <p>"Nosotros no heredamos la tierra de nuestros antepasados, la tomamos prestada de nuestros hijos"</p>
+      <p>Wangari Maathai</p>
+    </section>
+    <section class="carousel--margin">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
+            aria-current="true" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <picture>
+              <source media="(min-width: 1024px)"
+                srcset="https://graciads.com/wp-content/uploads/2021/05/1-1.jpg">
+              <img src="https://i.pinimg.com/1200x/89/54/ee/8954ee7021312e3d5cbf2cc93af4455f.jpg" class="d-block w-100"
+                alt="...">
+            </picture>
+            <div class="carousel--title">
+              <a href="/podcast"><p class="home__novedad">¡NUEVO CAPITULO DE PODCAST!</p>
+              <p class="home__novedad--campaña">FUNDACION DS</p></a>
+            </div>
+          </div>
+
+          <div class="carousel-item active">
+            <picture>
+              <source media="(min-width: 1024px)"
+                srcset="https://concepto.de/wp-content/uploads/2020/11/importancia-de-reciclar-e1604431187998.jpg">
+              <img src="https://apoidea.co/sites/default/files/g1830.jpeg%20%282%29_1.jpg" class="d-block w-100"
+                alt="...">
+            </picture>
+            <div class="carousel--title">
+              <a href="/hubrecircular"><p class="home__novedad">PARTICIPA EN LA 46° CAMPAÑA DE</p>
+              <p class="home__novedad--campaña">HUBRECIRCULAR</p></a>
+            </div>
+
+          </div>
+          <div class="carousel-item">
+            <picture>
+              <source media="(min-width: 1024px)"
+                srcset="https://th.bing.com/th/id/R.4f7ee5db2de4d08c1553a1dbd8511596?rik=5TPCLeKMyMO5zw&pid=ImgRaw&r=0">
+              <img src="https://www.elnuevodia.com/resizer/G-LlyvGSvpJGgJhPyjqD_ZmQq64=/1200x1200/smart/filters:quality(95):format(png)/cloudfront-us-east-1.images.arcpublishing.com/gfrmedia/ONSH24IOQJCXDM3MPQ554ONY54.jpg" class="d-block w-100"
+                alt="...">
+            </picture>
+            <div class="carousel--title">
+              <a href="/plantandofuturo"><p class="home__novedad">CONVOCATORIA PLANTACION</p>
+              <p class="home__novedad--campaña">PLANTANDO FUTURO</p></a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="home--about">
+      <img
+        src="https://s3-alpha-sig.figma.com/img/46b2/3fab/c448ec1593ac1181fe1d2e57b97247a1?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fYeS2gNqa~W5MA4RgEHgsSR4b0hhrpwWgh8EPq6Il5t6U3rdEpwLhhkNrKxt8jRYARYpBXsQ3D1Wn2hJAtPzud-z-CE61uiID43a3F4ZoP4iwordONWmhUuK7LifH~DnPlWJf9dfOtJw2BAzuA8QlLJuBGbJVTfI1E47liDHo5ieby6q2sPrmFLg-2LRwTyIZmXln4S4F-Z--6WaFDY040ezVJPyrHDHKMemuiT924R8NPXlXqtSx2wf6LEo8SODsars7a2AOGk~4r5wfbHzS36VnQye7qMOuC92p9haI1ag8f6~quHJcW5Mf6yfjeMhRQzNptDVnkIKQVzCDcac6w__"
+        alt="">
+      <p>Somos la <span class="specialWord">Fundación para el Desarrollo Sostenible</span> y nos ocupamos de organizar
+        iniciativas que promuevan el desarrollo sostenible en Córdoba y todo latinoamérica.</p>
+      <div class="objectives">
+        <div data-aos="fade-right">
+          <h3>Nuestra Misión</h3>
+          <p>Nuestra misión es contribuir en la transformación de nuestro mundo en uno más equilibrado y en armonía
+            con
+            la naturaleza, mediante proyectos de educación, investigación y trabajo de campo que impacten en lo
+            social,
+            ambiental y económico, dirigidos a las comunidades interesadas y comprometidas en mejorar su entorno y su
+            calidad de vida.</p>
+        </div>
+        <div data-aos="fade-left">
+          <h3>Nuestra Visión</h3>
+          <p>Ser referentes e influyentes en el ámbito regional en materia de desarrollo sostenible Consolidarnos como
+            una organización capaz de gestar y coordinar proyectos que impacten positivamente en las comunidades del
+            continente americano.</p>
+        </div>
+      </div>
+      <p>Nuestra actividad está en línea con los</p>
+      <div class="lineament">
+        <a href="/webinar">17 Objetivos para el Desarrollo Sostenible</a>
+      </div>
+    </section>
+    <section class="counter--container">
+      <div class="counter--trees">
+        <h1>NUESTROS LOGROS</h1>
+        <a href="/plantandofuturo"><div data-aos="fade-right">
+        <h2>PLANTANDO FUTURO</h2>
+        <div class="counter">
+          <h3>148</h3>
+          <h4>ÁRBOLES PLANTADOS</h4>
+        </div></a>
+      </div>
+      </div>
+      <a href=""><div class="counter--nurseries">
+        <div data-aos="fade-left">
+        <h2>INSTALACIÓN DE VIVEROS</h2>
+        <div class="counter">
+          <h3>43</h3>
+          <h4>VIVEROS INSTALADOS</h4>
+        </div></a>
+      </div>
+      </div>
+    </section>
+    <section class="home--projects">
+      <div class="projects--background">
+        <h1>¿QUÉ HACEMOS?</h1>
+        <div class="card--container">
+          <div class="card--projects" data-aos="fade-right">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/3511/6bda/4efbee59675505063d65d0a4e850a8e2?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YBnrJYZTN9OZsRXOb0neq~OffnQdu5gPYMVyRxtbV6UMfZhQ24t78L4jOyrLGoGNlqxq5ijumpovf2KiKjJkJSrhOFH1sCzbrLvpsQHBeneJnC1aGnkWMFDHXnAX2JQfa-gWj638MZrr-D9YlgNUj1Tzn80q7bcUSRBKV0MVGRk~oFE7eZU3DMnb~030VtMg95DycKgpFZlJiKRYM9X9FZ12Aizx~RaQxK5-pXTPBhChU4WlPVWFGM51Jx8eTCzPeOGB7QrYFdrBwTgBZHn-nQTUHh6WdxUBcy4Sx4tV48tXe5ZVA-YJzuCJVTzvM5hMWAKQd1CLh-X85qTRYEQ47Q__"
+              alt="" width="100px">
+            <h3>Proyectos de plantación de árboles masiva por toda la Argentina</h3>
+            <a href="/plantandofuturo">DESCUBRIR</a>
+          </div>
+          <div class="card--projects" data-aos="fade-up">
+            <img
+              src="https://s3-alpha-sig.figma.com/img/66f4/901b/3f3f72973c459535196fea3e7a227f9c?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UnrJXDQVVZPz6oOt7pN4hkVw6y8UVz7Ptfi6Jl~Xd1AJj2S60UZAbRiZPyO5jO6sx9UTHcETo-H0JuGI27EiTnEi7WhgfgDfl2~Gq9d-bcCBMnLlkwhUxhq4k~0LXerp7Jdmh3PBuYXeYMrGpa9b82XTJLc6X7pw0r-MjhCw42Ba89B6S0TrvOSKs9KWiird3DfmaAOdtp36mdJSeQJ17y0wjhQHJK3pQhXHhjyBpmwFPjkB3QDPAOIBJPYmuCkFUw3-hNoukyyfKpcm2JdMidVZLY~9IhPoY0MQmdZC5aApz2wtzLcHvP5xm34qR0xzsMO~6sGF1FK7kE-bBQa4RA__"
+              alt="" width="100px">
+            <h2>HUB RECIRCULAR</h2>
+            <h3>Evento de reciclaje masivo</h3>
+            <a href="/hubrecircular">DESCUBRIR</a>
+          </div>
+          <div class="card--projects" data-aos="fade-left">
+            
+            <img
+              src="https://s3-alpha-sig.figma.com/img/d525/65c4/1c7802945e20027b1f3212107da258f7?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Ccn4zDsaPQm32d0Zb66MERpawv3-aR8KplGz~1YlZHS9mITGAkEv2D1PjtZm-fZH4assPQ9RhBNK0DF54EAH9Hkazz2~t9mYkRkrwH97D3lMglYMXH8u4Y1b4NlH2~K9TNnJ0S4AtzUwu7SbUkXQMc0HLHLpWpcMXFrwljEiOlPIXQuWpXda023-IZ2ZPjaqdhUCMJuiMeKaMht8ugz1Bg4kWxZKGhDTvKaWCnW47jkerEgbPPCWqyFGTglQaUSKlI4WIYxAEVMe5uiCMciIsN3Gmel5jwSHC7ZeHmuz7pWsKS79RG-LZmiKsQ9aws9ZP~ormlYo5uVGbhJBRAk93A__"
+              alt="" width="100px">
+            <h3>Capacitaciones para voluntarios e instituciones educativas</h3>
+            <a href="">DESCUBRIR</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="partners">
+      <h1>NOS APOYAN</h1>
+      <div data-aos="zoom-in">
+        <a href="https://21.edu.ar/"><img
+            src="https://s3-alpha-sig.figma.com/img/c103/254f/7b3acecde4266944b5cc22a70155a4ee?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=DGko8wCRjIrOIQVWfuVvquZJtvo5WBQneSAl6ff5pahZLu5SYSsa2~q4XdolrrsnMdTUzobRwUna~UNp-~dsNhfFQd5e07ezpFdlSjoDhQOJq1jZ3oa5csWez3LoF0kcPQOrH5p9GBNfrbLZeeHfsmuXa6SaYZCUJVb6IJFE5-rYertCGAlzaMeQVxoPRAwg6AHzJoRtIFiwueRuk-u6dNlxn5gJJPhJxcCnnHRDfbDnYp~P78iNSp9gJjsMJu57oV7bS4u3xvmlXbAmFC-Jgac-ObtXcvDjuYTdjic~xzIcBLsJr6soiqjrElh3HtoNWmgV6Q1KT8LHUEdsgzi3hw__"
+            alt="" width="200px"></a>
+        <a href=""><img
+            src="https://imagenes.elpais.com/resizer/v2/Y3W6QUFBBZLLTALRW6NBRPZ2RA.jpg?auth=d68f18251117888479d8fdc3210796bc86d9d3f41719da72c2877bcafc3504ea&width=1200"
+            alt="" width="200px"></a>
+        <a href=""><img
+            src="https://imagenes.elpais.com/resizer/v2/Y3W6QUFBBZLLTALRW6NBRPZ2RA.jpg?auth=d68f18251117888479d8fdc3210796bc86d9d3f41719da72c2877bcafc3504ea&width=1200"
+            alt="" width="200px"></a>
+            
+      </div>
+
+    </section>
+    
+  </main>
+
+  <%- include('./partials/footer') %>
+
 </body>
 </html>

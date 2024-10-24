@@ -7,7 +7,7 @@
 }
 
 .plantando__body h2 {
-    font-size: 500%;
+    font-size: 200%;
     margin: 0 0 5% 0;
     font-weight: lighter;
 }
@@ -17,7 +17,7 @@
     text-align: center;
     text-transform: uppercase;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 700%;
+    font-size: 280%;
     margin: 0;
     padding: 10% 5% 3% 3%;
     font-weight: 400;
@@ -52,7 +52,7 @@
     color: #f2f2f2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 8%;
-    font-size: 180%;
+    font-size: 100%;
     font-weight: 300;
     line-height: 200%;
 }
@@ -100,44 +100,46 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color:  rgba(75, 141, 127, 0.8);
+    margin: 0 5px;
+    border-radius: 15px;
 }
 
 .stat-description {
     color: #f2f2f2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 10%;
-    font-size: 200%;
+    font-size: 100%;
     font-weight: 300;
     line-height: 200%;
     align-items: center;
+    padding: 0  0 10% 0;
 }
 
 .stat {
-    display:flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 8%;
-    padding: 10%;
-    height: 500px;
-    width: 500px;
     color: #f2f2f2;
-    font-weight: 300;
+    font-weight: 100;
     text-transform: uppercase;
-    border-radius: 100%;
-    background-color: rgba(75, 141, 127, 0.5);
+    box-shadow: inset 0 0 0 2000px rgba(0,0,0,.4);
+    border-radius: 5px;
     letter-spacing: 4px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .arbol-odometer {
     align-items: center;
-    font-size: 800%;
+    font-size: 200%;
+    font-weight: bolder;
+}
+
+.vivero-odometer {
+    align-items: center;
+    font-size: 200%;
     font-weight: bolder;
 }
 
 .arbol-type {
-    font-size: 200%;
+    font-size: 80%;
     align-items: center;
 }
 
@@ -146,10 +148,11 @@
     color: #f2f2f2;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 5%;
-    font-size: 180%;
+    font-size: 100%;
     font-weight: 300;
     line-height: 200%;
-    text-align:center
+    text-align:center;
+    margin:0 0 5%
 }
 
 .plantando__actividades--description {
@@ -166,11 +169,17 @@
 .plantando__actividad p {
     margin: 0;
     text-align: center;
-    font-weight: 300;
+    font-weight: 100;
     font-size: xx-large;
 }
 
 @media (min-width: 1024px) {
+    .plantando__body h2 {
+        font-size: 500%;
+        margin: 0 0 5% 0;
+        font-weight: lighter;
+    }
+    
     .title__flex--laptop {
         display:flex;
         flex-direction: row;
@@ -223,20 +232,23 @@
 
     .stats__column {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
     
     .stats__row {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        background-color:  rgba(75, 141, 127, 0.0);
+        box-shadow: inset 0 0 0 2000px rgba(0,0,0,.5);
+        margin: 10px;
     }
     
     .stat-description {
         color: #f2f2f2;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         padding: 10%;
-        font-size: 200%;
+        font-size: 150%;
         font-weight: 300;
         line-height: 200%;
         align-items: center;
@@ -248,27 +260,17 @@
         flex-direction: column;
         align-items: center;
         margin: 8%;
-        padding: 10%;
-        height: 500px;
-        width: 500px;
+        padding: 15%;
+        height: 250px;
+        width: 250px;
         color: #f2f2f2;
         font-weight: 300;
         text-transform: uppercase;
         border-radius: 100%;
         background-color: rgba(75, 141, 127, 0.5);
+        box-shadow: inset 0 0 0 2000px rgba(0,0,0,.0);
         letter-spacing: 4px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
-    .arbol-odometer {
-        align-items: center;
-        font-size: 800%;
-        font-weight: bolder;
-    }
-    
-    .arbol-type {
-        font-size: 200%;
-        align-items: center;
     }
     
     .plantando__logros--box {
@@ -280,9 +282,39 @@
         font-weight: 300;
         line-height: 200%;
     }
+
+    .arbol-odometer {
+        align-items: center;
+        font-size: 400%;
+        font-weight: bolder;
+    }
+    
+    .vivero-odometer {
+        align-items: center;
+        font-size: 400%;
+        font-weight: bolder;
+    }
+
+    .plantando__actividades--box {
+        box-shadow: inset 0 0 0 2000px rgba(0,0,0,.5);
+        color: #f2f2f2;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        padding: 5%;
+        font-size: 200%;
+        font-weight: 300;
+        line-height: 200%;
+        text-align:center;
+        margin:0 0 5%
+    }
 }
 
 @media (min-width: 1920px) {
+    .plantando__body h2 {
+        font-size: 500%;
+        margin: 0 0 5% 0;
+        font-weight: lighter;
+    }
+    
     .title__flex--laptop {
         display:flex;
         flex-direction: row;
@@ -332,6 +364,9 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        background-color:  rgba(75, 141, 127, 0.0);
+        box-shadow: inset 0 0 0 2000px rgba(0,0,0,.5);
+        margin: 10px;
     }
     
     .stat-description {
@@ -358,14 +393,9 @@
         text-transform: uppercase;
         border-radius: 100%;
         background-color: rgba(75, 141, 127, 0.5);
+        box-shadow: inset 0 0 0 2000px rgba(0,0,0,.0);
         letter-spacing: 4px;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, 'Roboto', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    
-    .arbol-odometer {
-        align-items: center;
-        font-size: 800%;
-        font-weight: bolder;
     }
     
     .arbol-type {
@@ -381,5 +411,24 @@
         font-size: 180%;
         font-weight: 300;
         line-height: 200%;
+    }
+
+    .arbol-odometer {
+        align-items: center;
+        font-size: 650%;
+        font-weight: bolder;
+    }
+    
+    .vivero-odometer {
+        align-items: center;
+        font-size: 650%;
+        font-weight: bolder;
+    }
+
+    .plantando__actividad p {
+        margin: 0;
+        text-align: center;
+        font-weight: 300%;
+        font-size: xx-large;
     }
 }

@@ -15,6 +15,70 @@
                         <i class="fa-solid fa-tree"></i>
                         </p>
                 </div>
+                <h2 data-aos="fade-up" class="plantando__description--title">ÚLTIMAS ACTIVIDADES</h2>
+            <section class="plantando__actividades--box" data-aos="fade-left">
+                <div class="plantando__actividades--description" data-aos="fade-left"> ¡No te pierdas las últimas novedades del proyecto!
+                </div>
+                <article class="carousel--margin">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
+                        aria-current="true" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item">
+                        <picture>
+                          <source media="(min-width: 1024px)"
+                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                            alt="...">
+                        </picture>
+                        <div class="carousel--title">
+                          <a href="#"><p class="home__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p>
+                        </div>
+                      </div>
+            
+                      <div class="carousel-item active">
+                        <picture>
+                          <source media="(min-width: 1024px)"
+                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                            alt="...">
+                        </picture>
+                        <div class="carousel--title">
+                          <a href="#"><p class="home__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p>
+                        </div>
+            
+                      </div>
+                      <div class="carousel-item">
+                        <picture>
+                          <source media="(min-width: 1024px)"
+                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                            alt="...">
+                        </picture>
+                        <div class="carousel--title">
+                          <a href="#"><p class="home__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                      data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </article>
+              </section>
                 <h2 data-aos="fade-up" class="plantando__description--title">¿QUÉ ES PLANTANDO FUTURO?</h2>
                 <article class="plantando__check--box" data-aos="fade-right">
                     <div class="check__description" data-aos="fade-right"> Plantando Futuro es un programa de forestación urbana que busca...</div>
@@ -40,9 +104,10 @@
                     <div class="stats__column">
                         <div class="stats__row" data-aos="fade-right">
                             <div class="stat-description">
-                                La iniciativa, impartida en actividades para la comunidad, hizo que se planten más de 600 árboles en la ciudad de Córdoba y localidades cercanas
+                                La iniciativa, impartida en actividades para la comunidad, hizo que se planten más de <strong>600</strong> árboles en la ciudad de Córdoba y localidades cercanas
                             </div>
                             <div class="stat"> 
+                              <div class="arbol-type">Más de</div>
                                 <div class="arbol-odometer">600</div>
                                 <div class="arbol-type">Arboles plantados</div>
                             </div>
@@ -50,7 +115,7 @@
                         <div class="stats__row" data-aos="fade-left">
                             <div class="stat"> 
                                 <div class="arbol-type">Más de</div>
-                                <div class="arbol-odometer">500</div>
+                                <div class="vivero-odometer">500</div>
                                 <div class="arbol-type">Arboles por plantar</div>
                             </div>
                             <div class="stat-description">
@@ -61,14 +126,6 @@
                     </div>
                 </div>
             </div>
-            <h2 data-aos="fade-up" class="plantando__description--title">ÚLTIMAS ACTIVIDADES</h2>
-            <article class="plantando__actividades--box" data-aos="fade-left">
-                <div class="plantando__actividades--description" data-aos="fade-left"> ¡No te pierdas las últimas novedades del proyecto!
-                </div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-            </article>
         </main>
 
         <script src="/javascript/odometer.js"></script>
@@ -76,12 +133,18 @@
         <script>
 
             const arbolOdometer = document.querySelector('.arbol-odometer')
+            const viveroOdometer = document.querySelector('.vivero-odometer')
 
-            const odometer = new Odometer({
+            const odometerOne = new Odometer({
                 el:arbolOdometer,
             })
 
-            odometer.update (600);
+            const odometerTwo = new Odometer({
+                el:viveroOdometer,
+            })
+
+            odometerOne.update (600);
+            odometerTwo.update (500);
 
         </script>
     <%- include('./partials/footer') %>

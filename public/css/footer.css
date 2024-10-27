@@ -1,5 +1,5 @@
 .footer{
-    background-color: rgba(51, 166, 166, 0.7);
+    background-color: #4B8D7F;
 }
 .logos--container{
     display: flex;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 .logos--container i{
-    color: #654F73;
+    color: #ffff;
 }
 .footer p{
     text-align: center;

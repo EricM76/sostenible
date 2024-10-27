@@ -20,12 +20,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.6); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(0, 0, 0, 0.6); /* Capa blanca semi-transparente sobre la imagen */
 }
 .home--phrase p {
     position: relative;
     font-size: 1em;
-    color: #000000;
+    color: #ffff;
     text-align: center;
     padding: 20px 30px;
     font-style: oblique 50deg;
@@ -64,7 +64,6 @@
     border-top-right-radius: 100px;
     left: 50%;
     transform: translate(-50%, -40%);
-    border: solid 1px #000000;
 }
 .home--about p{
     text-align: center;
@@ -72,6 +71,7 @@
     position: relative;
     top: -30px;
     font-weight: 400;
+    color: #ffff;
 }
 .home--about{
     background-image: url(https://static7.depositphotos.com/1113936/734/v/950/depositphotos_7347711-stock-illustration-recycle-garbage-concept-vector-background.jpg);
@@ -87,7 +87,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 .lineament{
     display: flex;
@@ -99,11 +99,14 @@
 .objectives{
     display: none;
     text-align: center;
+    position: relative;
+    margin: 0 10%;
 }
 .objectives h3{
     color: #4B8D7F;
     font-weight: 600;
     position: relative;
+    padding-top: 30px;
 }
 .home--about a{
     display: flex;
@@ -116,7 +119,7 @@
     border-radius: 50px;
 }
 .specialWord{
-    color: #7B548C;
+    color: #d685f9;
     font-weight: 600;
 }
 .counter--container{
@@ -148,7 +151,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(66, 66, 66, 0.6); /* Capa blanca semi-transparente sobre la imagen */
     
 }
 .counter--container h1 {
@@ -165,7 +168,7 @@
 }
 .counter{
     position: relative;
-    background-color: rgb(255, 255, 255, 0.7);
+    background-color: rgb(255, 255, 255, 0.6);
     color: #4B8D7F;
     margin: 60px 70px;
     padding: 20px;
@@ -174,8 +177,10 @@
 }
 .counter--container h2{
     position: relative;
-    color: #000000;
+    color: #ffff;
     padding: 60px 20px 0;
+    font-size: 24px;
+    text-shadow: 2px 0px 0px black, -2px 0px 0px black, 0px 2px 0px black, 0px -2px 0px black
 }
 .counter--container h3{
     font-size: 4em;
@@ -200,10 +205,10 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.3); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(0, 0, 0, 0.3); /* Capa blanca semi-transparente sobre la imagen */
 }
 .projects--background{
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     margin: 0 5%;
     display: flex;
     flex-direction: column;
@@ -215,7 +220,7 @@
     text-align: center;
     background:  rgba(75, 141, 127, 0.8);
     margin: 20px auto;
-    padding: 20px 0;
+    padding: 20px 0 50px;
     border-radius: 30px;
     width: 80%;
 }
@@ -226,7 +231,7 @@
 }
 .home--projects h1{
     position: relative;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.7);
     padding: 10px;
     margin-top: 20px;
     border-radius: 30px;
@@ -241,7 +246,7 @@
 }
 .home--projects h3{
     color: #ffff;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     font-size: 1.3em;
 }
 .home--projects a{
@@ -252,7 +257,6 @@
     border-radius: 30px;
     font-size: 1.5em;
     font-weight: 600;
-    margin-bottom: 0;
 }
 .partners {
     background-image: url(https://s3-alpha-sig.figma.com/img/c110/a315/a9dcb146dfb2d4c1ca90ac8257a46b5d?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NtVeEjTf0It~px9OPGbkDMT7qmvWb~J1wOhoVyKPCmqnWAXFCEXSaDBb~hCRCZa7Ja~NFNnT30sWq42D9acddwy27j3l7E71fAMeEJPrRgsJtDf-yKDboiDbaa5ly7Sj9W3SrAIutZAsCL23mLd~j8muYhQDlmm-y66L9-RrWfFu~QO2bh-Vc23MAYVixYe0faGYl5bF~Cxu5ZRFLCK08ex-u3iINAkencAADGwudIIh2d-C4f7JLolXimuYzr52CO5YOPM7BEY-cIewW~000DzYuxpAWWej~IQvtjfRCQw9UIA01o4A5i0zly0hM0FktNwHjZhwRICxJ8KiPQgN9Q__);
@@ -269,7 +273,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(123, 84, 140, 0.8); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(73, 53, 82, 0.8); /* Capa blanca semi-transparente sobre la imagen */
 }
 .partners div{
     display: flex;
@@ -333,6 +337,7 @@ a:hover{
         justify-content: center;
     }
 }
+
 @media (min-width: 1024px){
     .home--phrase{
     background-image: url(https://vidripack.com/es/wp-content/uploads/2022/07/RECICLAJE-IMPORTANCIA-1.jpg);
@@ -377,7 +382,7 @@ a:hover{
     }
     .objectives div{
         width: 50%;
-        background: rgba(255, 255, 255, 0.7) ;
+        background: rgba(0, 0, 0, 0.5) ;
         border: solid 0.5px #000000;
         border-radius: 50px;
         margin: 0 30px;
@@ -389,8 +394,8 @@ a:hover{
         flex-direction: row;
         justify-content: center;
         gap: 50px;
-        padding: 80px 0;
-        background-color: #0e6654;
+        padding: 100px 0 80px;
+        background-color: #51ffff;
     }
     .counter--trees, .counter--nurseries{
         border-radius: 40px;
@@ -400,8 +405,9 @@ a:hover{
 
     .counter--container h1{
         position: absolute;
-        top: -5px;
-        left: 37%;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%)
     }
     .counter--container h2{
         font-size: 1em;
@@ -430,8 +436,9 @@ a:hover{
     }
     .card--projects a{
         position: absolute;
-        bottom: 1px;
-        left: 80px;
+        top: 83%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .partners h1{
         font-size: 2em;
@@ -447,11 +454,4 @@ a:hover{
         border-top: solid  +2px #000000
     }
 }
-@media (min-width: 1440px){
-    .counter--container h1{
-        left: 41%;
-    }   
-    .card--projects a{
-        left: 125px;
-    }
-}
+

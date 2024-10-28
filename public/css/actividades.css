@@ -1,0 +1,79 @@
+.actividades h5 {
+    background-color: rgba(51, 166, 166, 1);
+    margin-top: 5px;
+    color: #ffff;
+    padding: 0 20px;
+}
+.cards--container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.actividad--card{
+    background-color: rgba(130, 128, 128, 0.7);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+.actividad--card img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px     
+}
+
+.card--section {
+    display: flex;
+}
+
+.card-body {
+    width: 160px;
+}
+.actividad--card a{
+    text-decoration: none;
+    color: black;
+}
+.actividades h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.actividad--card h2 {
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card__container--p {
+    height: 100px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.actividad--card h3 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+@media (min-width: 768px){
+    .actividad--card {
+        width: 45%;
+    }
+    .cards--container{
+        padding: 30px 35px;
+    }
+}
+@media (min-width: 1024px){
+    .actividad--card {
+        width: 30%;
+    }
+}
+@media (min-width: 1440px){
+    .actividad--card {
+        width: 20%;
+    }
+    .cards--container{
+        padding: 30px 50px;
+    }
+}

@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "title": "CONVOCATORIA PLANTACION",
+        "campaign": "PLANTANDO FUTURO",
+        "description": "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular, para que juntos recuperemos y reciclemos mejor 🙌🏼 Acercate al punto de acopio más cercano en la Ciudad de Córdoba:",
+        "date": "2022-10-19",
+        "image": "https://th.bing.com/th/id/R.b48d6be0a353dab4c693b9a13a94bb33?rik=H41nSLZ2wLAgZA&pid=ImgRaw&r=0",
+        "shortDescription":  "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular"
+    },
+    {
+        "id": 2,
+        "title": "CONVOCATORIA PLANTACION",
+        "campaign": "PLANTANDO FUTURO",
+        "description": "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular, para que juntos recuperemos y reciclemos mejor 🙌🏼 Acercate al punto de acopio más cercano en la Ciudad de Córdoba:",
+        "date": "2022-10-19",
+        "image": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+        "shortDescription":  "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular"
+
+    },
+    {
+        "id": 3,
+        "title": "CONVOCATORIA PLANTACION",
+        "campaign": "PLANTANDO FUTURO",
+        "description": "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular, para que juntos recuperemos y reciclemos mejor 🙌🏼 Acercate al punto de acopio más cercano en la Ciudad de Córdoba:",
+        "date": "2022-10-19",
+        "image": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+        "shortDescription":  "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular"
+    },
+    {
+        "id": 4,
+        "title": "CONVOCATORIA PLANTACION",
+        "campaign": "PLANTANDO FUTURO",
+        "description": "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular, para que juntos recuperemos y reciclemos mejor 🙌🏼 Acercate al punto de acopio más cercano en la Ciudad de Córdoba:",
+        "date": "2022-10-19",
+        "image": "http://dummyimage.com/300x300.png/cc0000/ffffff",
+        "shortDescription":  "El sábado 19 de Octubre te esperamos de 9 a 12hs. En una nueva Campaña Recircular"
+    }
+]

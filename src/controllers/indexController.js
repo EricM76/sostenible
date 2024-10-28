@@ -1,4 +1,4 @@
-const path = require ('path')
+const {getData} = require('../data')
 
 module.exports = {
     index : (req,res) => {
@@ -28,4 +28,10 @@ module.exports = {
 
         return res.render ('webinar')
     },
+    actividades :  (req,res) => {
+        const actividades = getData("actividades.json")
+        return res.render('actividades',{
+            actividades
+        })
+    }
 }

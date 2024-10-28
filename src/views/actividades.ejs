@@ -1,8 +1,44 @@
-<%- include('./partials/head',{
-    title : 'Actividades'
-  }) %>
-<body>
+<%- include('./partials/head',{ title : 'Actividades' }) %>
+
+  <body>
     <%- include('./partials/header') %>
-    
-</body>
-</html>
+      <main class="actividades">
+        <h5>Actividades</h5>
+        <h1>Proximas Actividades</h1>
+
+        <div class="cards--container">
+          <% actividades.forEach(({id, image, title, description, campaign})=> { %>
+            <div class="actividad--card">
+              <a href="/actividades/<%= id %>">
+
+                <div class="card--section">
+                  <img src="<%= image %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h2 class="card-title">
+                      <%= title %>
+                    </h2>
+                    <div class="card__container--p"><p><%= description %></p></div>
+                    
+                  </div>
+                </div>
+              </a>
+              <div class="card-footer">
+                <h3><%= campaign %></h3>
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+
+
+        </div>
+        
+          </div>
+
+
+
+      </main>
+      <%- include('./partials/footer') %>
+  </body>
+
+  </html>

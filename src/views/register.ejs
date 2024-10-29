@@ -7,8 +7,12 @@
     <%- include('./partials/header') %>
   <main>
     <div class="nav_menu">
-      <a href="/admin" class="admin">Administrador</a>
-      <a href="/admin/login" class="login">Login</a>
+      <div class="box--admin">
+        <a href="/admin" class="admin">Administrador</a>
+      </div>
+      <div class="box--login">
+        <a href="/admin/login" class="login">Login</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-body">
@@ -35,7 +39,7 @@
               placeholder="Ingresá una contraseña" value="" required />
             <p class="form-text alert-hide">Obligatorio</p>
           </div>
-          <button type="submit" class="btn btn-primary">Registrarme</button>
+          <button type="submit" class="btn btn-outline-dark">Registrarme</button>
         </form>
       </div>
     </div>

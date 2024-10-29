@@ -3,8 +3,7 @@
 }
 
 .admin main {
-    background-color: var(--color_blanco);
-    padding-bottom: 40px;
+    background-color: #fff;
 }
 
 /* Menu de nav */
@@ -17,7 +16,7 @@
     border-radius: 10px;
 }
 
-.nav_menu span {
+.nav_menu .box--admin {
     display: inline-flex;
     color: #fff;
     margin: 10px 10px 10px 40px;

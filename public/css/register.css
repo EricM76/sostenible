@@ -3,8 +3,33 @@
 }
 
 .register main {
-    background-color: var(--color_blanco);
-    padding-bottom: 40px;
+    background-color: #fff;
+}
+
+/* Menu de nav */
+
+.nav_menu {
+    background-color: #33A6A6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.nav_menu .box--admin {
+    margin: 10px 10px 10px 40px;
+}
+
+.nav_menu .box--login {
+    margin: 10px 40px 10px 10px;
+}
+
+.nav_menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card {
     margin: 20px;
 }
 

@@ -1,1 +1,24 @@
-<h1>Hola mundo</h1>
+<%- include('./partials/head',{ title : 'Actividades' }) %>
+
+    <body>
+        <%- include('./partials/header') %>
+            <main>
+                <div>
+                    <img src="<%= image %>" alt="Card image cap">
+                </div>
+                <div>
+                    <h1>
+                        <%= title %>
+                    </h1>
+                    <h2>
+                        <%= campaign %>
+                    </h2>
+                    <p><%= description %></p>
+
+                </div>
+            </main>
+
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>

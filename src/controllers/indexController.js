@@ -28,4 +28,8 @@ module.exports = {
 
         return res.render ('webinar')
     },
+    voluntariado : (req,res) => {
+
+        return res.render ('voluntariado')
+    }
 }

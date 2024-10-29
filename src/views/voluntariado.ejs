@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <%- include('./partials/head',{
+		title : 'Voluntariado'
+	}) %>
 </head>
-<body>
-    
+<body class="voluntariado__body">
+    <%- include('./partials/header') %>
+        <main>
+            <section class="description">
+                <h1 data-aos="fade-up" class="description__title">AYUDANOS A MEJORAR <p>NUESTRO PLANETA</p></h1>
+                <p data-aos="fade-up" class="box__item--micro">
+                    <i class="fa-solid fa-people-roof" fs-500></i>
+                    </p>
+                <article class="description__box">
+                    <div data-aos="fade-up"><p>El voluntariado es crucial para poder llevar adelante cada iniciativa. 
+                        Hasta el momento, se unieron más de <strong>30000 voluntarios</strong> a las causas de la Fundación para el Desarrollo Sostenible</p></div>
+                    <div data-aos="fade-up"><p>Solo gracias a esta gran comunidad es posible producir un buen impacto en la educación de los ciudadanos</p></div>
+                    <div data-aos="fade-up"><p>Son distintos los intereses que mueven a ser Voluntario. Puede ser parte de una experiencia laboral o educativa, para otros puede ser la necesidad de 
+                        ser parte de una transformación social, o simplemente para pertenecer a un grupo y conocer gente. <strong>¿Cual es tu interés?</strong></p></div>
+                </article>
+            </section>
+            <section class="trabajos">
+                <div class="trabajos__flex">
+                    <div class="voluntario">¡QUIERO AYUDAR EN LA CAUSA!</div>
+                    <div class="laburos">¡QUIERO TRABAJAR CON USTEDES!</div>
+                </div>
+            </section>
+            <section class="button">
+                <div class="button">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScTIrtzIw0kCTI9rE3QU9fw7iT5vIiJEzdyKB2Z83pf0lnBdw/viewform" class="voluntario__box--link" data-aos="fade-in">¡COMPLETA EL FORMULARIO!</a>
+                </div>
+            </section>
+        </main>
+    <%- include('./partials/footer') %>
 </body>
 </html>

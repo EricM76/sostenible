@@ -28,6 +28,10 @@ module.exports = {
 
         return res.render ('webinar')
     },
+    voluntariado : (req,res) => {
+
+        return res.render ('voluntariado')
+    },
     actividades :  (req,res) => {
         const actividades = getData("actividades.json")
         return res.render('actividades',{

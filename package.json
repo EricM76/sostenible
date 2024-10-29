@@ -7,7 +7,7 @@
   "name": "proyecto-integrador-main",
   "description": "** Fundacion Puerta 18 **",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
   "devDependencies": {
     "tailwindcss": "^3.4.14"
   },

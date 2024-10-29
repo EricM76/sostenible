@@ -4,71 +4,285 @@
     <%- include('./partials/head',{
 		title : 'Hub Recircular'
 	}) %>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
-<body class="plantando__body">
+<body class="hub__body">
     <%- include('./partials/header') %>
         <main>
-            <section class="plantando__description">
+            <section class="hub__description">
                 <div class="title__flex--laptop">
-                    <h1 data-aos="fade-up" class="plantando__description--title">PLANTANDO <p>FUTURO</p></h1>
                     <p data-aos="fade-up" class="box__item--tree">
-                        <i class="fa-solid fa-tree"></i>
+                        <i class="fa-solid fa-recycle"></i>
                         </p>
+                    <h1 data-aos="fade-up" class="hub__description--title"><p>HUB</p> RECIRCULAR</h1>
                 </div>
-                <h2 data-aos="fade-up" class="plantando__description--title">¿QUÉ ES PLANTANDO FUTURO?</h2>
-                <article class="plantando__check--box">
-                    <div class="check__description" data-aos="fade-up"> Plantando Futuro es un programa de forestación urbana que busca...</div>
+                <h2 data-aos="fade-up" class="hub__description--title">ÚLTIMAS ACTIVIDADES</h2>
+                <section class="hub__actividades--box" data-aos="fade-left">
+                    <div class="hub__actividades--description" data-aos="fade-left"> ¡No te pierdas las últimas novedades del proyecto!
+                    </div>
+                    <article class="carousel--margin">
+                      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
+                            aria-current="true" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item">
+                            <picture>
+                              <source media="(min-width: 1024px)"
+                                srcset="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                              <img src="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                                alt="...">
+                            </picture>
+                            <div class="carousel--title">
+                              <a href="#"><p class="home__novedad">PARTICIPA EN LA 46° CAMPAÑA DE HUB RECIRCULAR</p></a>
+                            </div>
+                          </div>
+                
+                          <div class="carousel-item active">
+                            <picture>
+                              <source media="(min-width: 1024px)"
+                                srcset="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                              <img src="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                                alt="...">
+                            </picture>
+                            <div class="carousel--title">
+                              <a href="#"><p class="home__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p></a>
+                            </div>
+                
+                          </div>
+                          <div class="carousel-item">
+                            <picture>
+                              <source media="(min-width: 1024px)"
+                                srcset="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
+                              <img src="/img/hub/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
+                                alt="...">
+                            </picture>
+                            <div class="carousel--title">
+                              <a href="#"><p class="home__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p></a>
+                            </div>
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                          data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </article>
+                  </section>
+            <div class="materiales__container">
+                <h2 data-aos="fade-up" class="hub__description--title">¿QUÉ ES HUB RECIRCULAR?</h2>
+                <article class="hub__check--box" data-aos="fade-right">
                     <div class="column__container">
-                            <div class="row__container" data-aos="fade-up">
-                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
-                                <div><p>Incrementar y consolidar el arbolado urbano</p></div>
+                            <div class="row__container">
+                                <div class="hub_check__box"></div>
+                                <div class="column__container" data-aos="fade-right">
+                                    <div class="hub__column--title"><p>LO QUE HACEMOS</p></div>
+                                    <div><p>El HUB Recircular:  es un espacio donde interactúan cooperativas, empresas, instituciones , ONGs, 
+                                    ciudadanos apoyando el recupero y el aumento de índices de reciclaje en la ciudad de Córdoba</p></div>
+                                </div>
+                                <div class="hub_check__box" data-aos="fade-right"><i class="fa-solid fa-recycle"></i></div>
                             </div>
-                            <div class="row__container" data-aos="fade-up">
-                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
-                                <div><p>Promover la conciencia ambiental y la reconexión con la naturaleza</p></div>
+                            <div class="row__container">
+                                <div class="hub_check__box" data-aos="fade-left"><i class="fa-solid fa-trash-can"></i></div>
+                                <div class="column__container" data-aos="fade-left">
+                                    <div class="hub__column--title-middle"><p>¿QUÉ SUCEDE EN CÓRDOBA?</p></div>
+                                    <div><p>En la ciudad, con 1,3 millones de habitantes, se produce 2000 TONELADAS diarias de residuos y se recicla es del 0.5% (Gob. Abierto, 2019). Mientras 
+                                    que en un estudio a recuperadores base (3 Cooperativas 62 miembros) solo recuperan en las calles o a la intemperie 5 toneladas mensuales cada una de diferentes materiales</p></div>
+                                </div>
+                                <div class="hub_check__box"></div>
                             </div>
-                            <div class="row__container" data-aos="fade-up">
-                                <div class="check__box"><i class="fa-solid fa-check"></i></div>
-                                <div><p>Mejorar la calidad de vida de los vecinos mediante la generación de un entorno más verde y saludable</p></div>
+                            <div class="row__container">
+                                <div class="hub_check__box"></div>
+                                <div class="column__container" data-aos="fade-right">
+                                    <div class="hub__column--title"><p>¿POR QUÉ PASA ESTO?</p></div>
+                                    <div><p>La falta de concientización, educación sobre los impactos ambientales, incentivos a los ciudadanos, políticas gubernamentales serias sobre el reciclaje, 
+                                    además de procesos de comercialización de comercio justo hacia recuperadores base, provocan una combinación que aporta a ver a los espacios públicos más contaminados</p></div>
+                                </div>
+                                <div class="hub_check__box" data-aos="fade-right"><i class="fa-solid fa-book-open-reader"></i></div>
                             </div>
-                    </div>
-                </article>
-            </section>
-            <div class="stats__container">
-                <h2 data-aos="fade-up" class="plantando__description--title">NUESTROS LOGROS</h2>
-                <div class="stats__box">
-                    <div class="stats__column">
-                        <div class="stats__row" data-aos="fade-up">
-                            <div class="stat-description">
-                                La iniciativa, impartida en actividades para la comunidad, hizo que se planten más de 600 árboles en la ciudad de Córdoba y localidades cercanas
+                            <div class="column__container">
+                                <div class="hub_check__box"></div>
+                                    <div class="check__description" data-aos="fade-down"><p>La iniciativa <strong>Hub Recircular</strong>, al presenciar tal emergencia, busca incentivar comportamientos altruistas y de apoyo mutuo dentro de la comunidad cordobesa por medio de campañas 
+                                        de reciclaje masivas y capacitaciones constantes en todas las esferas de la sociedad. Todo con la esperanza de poder ver un mundo más verde</p></div>
+                                <div class="hub__handshake--box" data-aos="fade-down"><i class="fa-solid fa-handshake"></i></div>
+                              </div>
+                      </div>
+                      </article>
+                </div>
+                <h2 data-aos="fade-up" class="hub__description--title">¿Qué reciclamos?</h2>
+                <div class="materiales__box">
+                        <div class="materiales__row" data-aos="fade-up">
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/agua.png" alt="Made by Freepik">
+                            </div class="materiales__img--box">
+                            <div class="materiales__description">
+                              Plásticos
                             </div>
-                            <div class="stat"> 
-                                <div class="arbol-odometer">600</div>
-                                <div class="arbol-type">Arboles plantados</div>
+                          </div>
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/agua.png" alt="Made by Freepik">
                             </div>
+                            <div class="materiales__description">
+                              Telgopor EPS
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/lata-de-cerveza.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Aluminio y Metal
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/paquete.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Papel y Cartón
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/leche.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Tetrabrik
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/tela.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Telas
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/oxido.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Chatarra
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/aceite-de-oliva.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Aceite Vegetal
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/smartphone.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Celulares
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/clean-clothes_4178110.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Ropa
+                            </div>
+                          </div>                          
+                          <div class="materiales__column" data-aos="fade-right">
+                            <div class="materiales__img--box">
+                              <img class="materiales__img" src="img/hub/materiales/toys_16779187.png" alt="Made by Freepik">
+                            </div>
+                            <div class="materiales__description">
+                              Juguetes
+                            </div>
+                          </div>
                         </div>
-                        <div class="stats__row" data-aos="fade-up">
-                            <div class="stat"> 
-                                <div class="arbol-type">Más de</div>
-                                <div class="arbol-odometer">500</div>
-                                <div class="arbol-type">Arboles por plantar</div>
-                            </div>
-                            <div class="stat-description">
-                                Se logró la restauración y puesta en marcha de viveros para la producción de nativas, 
-                                que hoy en día cuenta con un stock de <strong>500</strong> árboles a la espera de ser plantados
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <h2 data-aos="fade-up" class="plantando__description--title">ÚLTIMAS ACTIVIDADES</h2>
-            <article class="plantando__actividades--box">
-                <div class="plantando__actividades--description" data-aos="fade-up"> ¡No te pierdas las últimas novedades del proyecto!
-                </div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-                <div class="plantando__actividad" data-aos="fade-up"><p>Última actividad</p></div>
-            </article>
+            </section>
+            <section>
+              <div class="hub__actividades--box">
+                <h2 data-aos="fade-up" class="hub__description--title">CONOCE NUESTROS PROYECTOS</h2>
+                  <div class="hub__actividades--box-escuela" data-aos="fade-down">
+                    <h3><span class="escuela__item"><i class="fa-solid fa-school"></i></span> RECIRCULAR EN ESCUELAS <span class="escuela__item"><i class="fa-solid fa-school"></i></span></h3>
+                    <div class="hub__actividades--box-inside">
+                      <div class="hub__actividades--column" data-aos="fade-right">
+                          <div><p><strong>¡Hub Recircular también llegó a las instituciones educativas!</strong></p>
+                            </div>
+                          <div><p>Los años escolares establecen una etapa clave en el desarrollo de la conducta, la conciencia social y 
+                            la solidaridad en cada niña y niño o adolescente. En el colegio se enseñan y aprenden valores y comportamientos 
+                            que acompañarán en la edad adulta y  como ciudadanos.</p></div> 
+                          <div><p>Es por ello que es sumamente  importante  despertar el interés 
+                            y crear hábitos de los escolares por el cuidado y la protección del medio ambiente durante esta etapa.</p></div>
+                        </div>
+                        <div class="hub__actividades--img-box" data-aos="fade-right"><img class="hub__actividades--img" src="img/hub/escuelas.PNG" alt="Recircular en escuelas"></div>
+                      </div>
+                      <div class="hub__actividades--box-inside">
+                        <div class="hub__actividades--img-box" data-aos="fade-left"><img class="hub__actividades--img" src="img/hub/escuelas2.PNG" alt="Recircular en escuelas"></div>
+                        <div class="hub__actividades--column" data-aos="fade-left">
+                          <div><p>El equipo de la FDS acompaña en el lanzamiento de Hub Recircular en escuelas, en dónde se acompaña a 
+                          cada institución, directivos y docentes mediante guías a implementar según la realidad y posibilidad de cada 
+                          espacio escolar. </p>
+                           </div>
+                         <div><p>
+                           La actividad incluye a las cooperativas de Recirculadores Urbanos quienes serán los responsables 
+                           de retirar los materiales recolectados que son almacenados en las bolsas Big Bag que entrega la FDS.</p>
+                           </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="hub__actividades--box-barrio" data-aos="fade-down">
+                    <h3><span class="barrio__item"><i class="fa-solid fa-tree-city"></i></span> RECIRCULAR EN BARRIOS <span class="barrio__item"><i class="fa-solid fa-tree-city"></i></span></h3>
+                    <div class="hub__actividades--box-inside">
+                      <div class="hub__actividades--column" data-aos="fade-right">
+                          <div><p><strong>¡Hub Recircular también llegó a las instituciones educativas!</strong></p>
+                            </div>
+                          <div><p>Los años escolares establecen una etapa clave en el desarrollo de la conducta, la conciencia social y 
+                            la solidaridad en cada niña y niño o adolescente. En el colegio se enseñan y aprenden valores y comportamientos 
+                            que acompañarán en la edad adulta y  como ciudadanos.</p></div> 
+                          <div><p>Es por ello que es sumamente  importante  despertar el interés 
+                            y crear hábitos de los escolares por el cuidado y la protección del medio ambiente durante esta etapa.</p></div>
+                        </div>
+                        <div class="hub__actividades--img-box" data-aos="fade-right"><img class="hub__actividades--img" src="img/hub/escuelas.PNG" alt="Recircular en escuelas"></div>
+                      </div>
+                      <div class="hub__actividades--box-inside">
+                        <div class="hub__actividades--img-box" data-aos="fade-left"><img class="hub__actividades--img" src="img/hub/escuelas2.PNG" alt="Recircular en escuelas"></div>
+                        <div class="hub__actividades--column" data-aos="fade-left">
+                          <div><p>El equipo de la FDS acompaña en el lanzamiento de Hub Recircular en escuelas, en dónde se acompaña a 
+                          cada institución, directivos y docentes mediante guías a implementar según la realidad y posibilidad de cada 
+                          espacio escolar. </p>
+                           </div>
+                         <div><p>
+                           La actividad incluye a las cooperativas de Recirculadores Urbanos quienes serán los responsables 
+                           de retirar los materiales recolectados que son almacenados en las bolsas Big Bag que entrega la FDS.</p>
+                           </div>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+            </section>
+            <section class="voluntario">
+              <div class="voluntario__box" data-aos="fade-in">
+                <div class="voluntario__box--title">voluntariado</div>
+                <p>¿Querés formar parte de esta hermosa iniciativa? ¡Forma parte de nuestra organización y ayudanos a hacer de Córdoba un lugar mejor!</p>
+                <a href="/voluntariado" class="voluntario__box--link" data-aos="fade-in">APRENDE MÁS SOBRE CÓMO AYUDARNOS</a>
+              </div>
+            </section>
         </main>
 
         <script src="odometer.js"></script>

@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const {lista, detail} = require('../controllers/actividadesController')
+const {lista, detail} = require('../controllers/novedadesController')
 
 router
     .get('/',lista)
-    .get('/:actividad_id',detail)
+    .get('/:novedad_id',detail)
 
 
 module.exports = router

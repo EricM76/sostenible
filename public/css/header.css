@@ -35,6 +35,8 @@
     z-index: 1;
     text-align: center;
     background-color: #ffff;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .nav--color{
     background-color: #33A6A6;
@@ -81,7 +83,7 @@
         font-size: 1.3em;
     }
     .header--nav {
-        top: 27vw;
+        top: 20vw;
     }
     .menu{
         max-height: 400px; 

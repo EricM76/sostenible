@@ -1,0 +1,123 @@
+.actividades{
+    background-image: url(https://economiacircular.mma.gob.cl/wp-content/uploads/2023/10/AdobeStock_427756353-1024x683.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    position: relative;
+}
+.actividades::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); 
+}
+.actividades--header {
+    background-color: rgba(51, 166, 166, 1);
+    margin-top: 5px;
+    color: #ffff;
+    padding: 0 20px;
+}
+.cards--container {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-left: auto;
+    position: relative;
+}
+.actividad--card{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+}
+.actividad--card img {
+    width: 120px;
+    height: 120px;
+    margin-right: 10px     
+}
+
+.card--section {
+    display: flex;
+}
+
+.card-body {
+    width: 160px;
+}
+.actividad--card a{
+    text-decoration: none;
+    color: black;
+}
+.container--h1{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-top: 30px;
+}
+.actividades h1 {
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+}
+
+.actividad--card h2 {
+    font-size: 1em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.card__container--p {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.actividad--card h3 {
+    font-size: 1em;
+    margin-bottom: 0;
+}
+.date{
+    background-color: rgba(51, 166, 166, 1);
+    color: #ffff;
+    padding: 2px 5px;
+    border-radius: 30px;
+}
+@media (min-width: 768px){
+    .actividad--card {
+        width: 45%;
+    }
+    .cards--container{
+        padding: 30px 35px;
+    }
+    .actividad--card h3{
+        position: relative;
+        bottom: 0px;
+    }
+}
+@media (min-width: 1024px){
+    .actividad--card {
+        width: 30%;
+    }
+    .actividades--header{
+        margin: 0;
+    }
+    .container--h1{
+        justify-content: flex-start;
+        padding-left: 50px;
+    }
+}
+@media (min-width: 1440px){
+    .actividad--card {
+        width: 23%;
+    }
+    .cards--container{
+        padding: 30px 50px;
+    }
+}

@@ -13,6 +13,7 @@ const plantandoRoutes = require('./routes/plantando.routes.js');
 const hubRoutes = require('./routes/hub.routes.js');
 const voluntariadoRoutes = require ('./routes/voluntariado.routes.js');
 const actividadesRoutes = require ('./routes/actividades.routes.js');
+const novedadesRoutes = require ('./routes/novedades.routes.js');
 
 //configuración de los recursos estáticos
 app.use(express.static(path.join(__dirname,'..', 'public')));
@@ -34,5 +35,6 @@ app.use('/plantandofuturo', plantandoRoutes);
 app.use('/hubrecircular', hubRoutes);
 app.use('/voluntariado', voluntariadoRoutes);
 app.use('/actividades', actividadesRoutes);
+app.use('/novedades', novedadesRoutes);
 
 app.listen(PORT, () => console.log('Servidor corriendo en http://localhost:' + PORT))

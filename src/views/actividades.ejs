@@ -1,8 +1,75 @@
-<%- include('./partials/head',{
-    title : 'Actividades'
-  }) %>
-<body>
+<%- include('./partials/head',{ title : 'Actividades' }) %>
+
+  <body>
     <%- include('./partials/header') %>
-    
-</body>
-</html>
+      <h4 class="actividades--header">Actividades</h4>
+      <main class="actividades">
+        <div class="container--h1">
+          <h1>Proximas Actividades</h1>
+        </div>
+        <div class="cards--container">
+          <% actividades.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+            <div class="actividad--card">
+              <a href="/actividades/<%= id %>">
+
+                <div class="card--section">
+                  <img src="<%= image %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h2 class="card-title">
+                      <%= title %>
+                    </h2>
+                    <div class="card__container--p">
+                      <p>
+                        <%= shortDescription %>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+              <div class="card-footer">
+                <h3>
+                  <%= campaign %>
+                </h3>
+                <small class="date"><%= date %></small>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="container--h1">
+          <h1>Actividades Pasadas</h1>
+        </div>
+        <div class="cards--container">
+          <% actividades.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+            <div class="actividad--card">
+              <a href="/actividades/<%= id %>">
+
+                <div class="card--section">
+                  <img src="<%= image %>" alt="Card image cap">
+                  <div class="card-body">
+                    <h2 class="card-title">
+                      <%= title %>
+                    </h2>
+                    <div class="card__container--p">
+                      <p>
+                        <%= shortDescription %>
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+              <div class="card-footer">
+                <h3>
+                  <%= campaign %>
+                </h3>
+                <small class="date"><%= date %></small>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+      </main>
+      <%- include('./partials/footer') %>
+  </body>
+
+  </html>

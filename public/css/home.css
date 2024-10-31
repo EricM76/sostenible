@@ -8,9 +8,9 @@
 }
 .home--phrase {
     background-image: url(https://s3-alpha-sig.figma.com/img/39b7/4ebe/fa71d40bea583b736d18c60721c76260?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NN7Z2Xtza9PwZuIgDkDo6JQEIvHaKyE4z9sgRZhFycU0Ln911GSP3OqpqheMJLflQ7~Z~ub3khW3b4p0~OvdBxLMwOo8TMwtSe8YVOqVBpaR5FZlHHM8Sz6K8dm-abREbOU5cQL3XfSkeV2ngLS75JhLaZdGRjytaivWYxjg6hXpPt-xksyqUfCKj2AuGGvvVyTguyFnB5mbpKbIIXaqPA3eqyGxpjZey6gFGLmTDpIki9I4hSpXg3Fhgb8882XHM1e89aKgRGSIWmwBVNwUccAqOKKGw-~Et4dNgqISi3~N~6lBKewvdheaBbc6vT8S6sACd2Z220Z0ZORvdjNC0A__);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     position: relative;
 }
 .home--phrase::before {
@@ -20,7 +20,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.6); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(0, 0, 0, 0.6); 
 }
 .home--phrase p {
     position: relative;
@@ -75,9 +75,9 @@
 }
 .home--about{
     background-image: url(https://static7.depositphotos.com/1113936/734/v/950/depositphotos_7347711-stock-illustration-recycle-garbage-concept-vector-background.jpg);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     position: relative;
 }
 .home--about::before {
@@ -134,15 +134,15 @@
 }
 .counter--trees{
     background-image: url(https://s3-alpha-sig.figma.com/img/8b4e/c207/0ee8f0f4105051844f288e86a6d0a462?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hdhMWHQ~BoStVry8GcshhabY8ol8g~0QChsa5~nH27vjpOfJov1YBozxpE-8NPw3PJNAcAZx6n-7mZiGO2dxYkyr8VH9ElZALVL7Crh9pzN0OF2QuGhpTozpTXlRHRb4PDqQ4KxYsofl0pdnui5xsFQ3PV40K5pVICvs64tASktnODQA90FrUzYtMSNOs1RLxLtkooB1Bk5yZyBKz9NG~qn-FDvnFCV1dtD2D9TxY6KJre2TQKXvTdralsGgmTm4jnTarO0d8Ai0gJGw4uCY07rFoEfyHRy2DjL7CCA0rTNqFUgTjd6DIg-tAplVv12rj8pBRUZPItl7C--C4hS3dA__);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 .counter--nurseries{
     background-image: url(https://s3-alpha-sig.figma.com/img/c376/100e/9c02c2b082ab47c6b0a9788ef9ec6f78?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UIjI-xDRP28MsZyABM~aNH9rrI8Vssqk5nhtHXb7p3jVWC2jKaIQIg6Oi8lCsLWf6RTMtvFxEeFBS9mDhqFoHHeq0g8iTiIfEkHZhSgDlglKDEPhcPJ5UKvTwEga3vbsp9rVekGzhSJ5Sc13FifEHj~nmBbzreaIpWpBfpouEELjYqETuL9Ui7dm7QzHHokZLpfCffYF3xWbrFQ2uA3m-UfT2gZTEuWet-XR3zfEB6M1zyOO3RPTVBNLR99u4xom4Ebnp08DxSOPU5xTs-DPcnyPC78y21N0FiiHmsfqbq8uTzT234ahqZyP9Xm4qvtaK6mTREv3DfNcy4WxV0PMUg__);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 .counter--trees::before {
     content: '';
@@ -151,7 +151,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(66, 66, 66, 0.6); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(66, 66, 66, 0.6); 
     
 }
 .counter--container h1 {
@@ -168,7 +168,7 @@
 }
 .counter{
     position: relative;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: rgb(255, 255, 255, 0.9);
     color: #4B8D7F;
     margin: 60px 70px;
     padding: 20px;
@@ -192,9 +192,9 @@
 
 .home--projects{
     background-image: url(https://s3-alpha-sig.figma.com/img/01e4/5d74/d72dc42a437a546a78318f1181f98185?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fNbKKWTjUW4u8S6lcv7Kij-1aOqdulwLwvnSv~LPBuN7I4s2gxhSdgzvJnJC2j8wAPivcFqGO6htMS46NFk2ZFWRjqRSpyCrUksiGweYiv2vowNEWCZl6jQwSoUf3buZKCWYO4ylLPvZh2ZQsm6xSE8OhFU3DNDBH2jIbtHPyjXdL5tgyiAApY8MlPXEcyxyAShSfNKhWk3BhRo60ZouE-57wY67omGOxSeMo-RpxcJ0mzIXRbkJR0UxVl0RU2~ELGbChaprfujpklPdC5braPqRbu4IVoUs1K4OrKRh0jWY6EkRR2UrZeh1Pifxh2QUB-7pi1VxmZExWswJwFS5bA__);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     position: relative;
     padding: 20px 0;
 }
@@ -205,7 +205,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(0, 0, 0, 0.3); 
 }
 .projects--background{
     background: rgba(0, 0, 0, 0.3);
@@ -260,9 +260,9 @@
 }
 .partners {
     background-image: url(https://s3-alpha-sig.figma.com/img/c110/a315/a9dcb146dfb2d4c1ca90ac8257a46b5d?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NtVeEjTf0It~px9OPGbkDMT7qmvWb~J1wOhoVyKPCmqnWAXFCEXSaDBb~hCRCZa7Ja~NFNnT30sWq42D9acddwy27j3l7E71fAMeEJPrRgsJtDf-yKDboiDbaa5ly7Sj9W3SrAIutZAsCL23mLd~j8muYhQDlmm-y66L9-RrWfFu~QO2bh-Vc23MAYVixYe0faGYl5bF~Cxu5ZRFLCK08ex-u3iINAkencAADGwudIIh2d-C4f7JLolXimuYzr52CO5YOPM7BEY-cIewW~000DzYuxpAWWej~IQvtjfRCQw9UIA01o4A5i0zly0hM0FktNwHjZhwRICxJ8KiPQgN9Q__);
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     position: relative;
     padding: 30px 0;
 }
@@ -273,7 +273,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(73, 53, 82, 0.8); /* Capa blanca semi-transparente sobre la imagen */
+    background: rgba(73, 53, 82, 0.8); 
 }
 .partners div{
     display: flex;

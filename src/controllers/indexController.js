@@ -9,39 +9,10 @@ module.exports = {
 
         return res.render('admin')
     },
-    contacto : (req,res) => {
-        return res.render('contacto')
+    about : (req,res) => {
+        return res.render('about')
     },
-    plantando : (req,res) => {
-
-        return res.render('plantandofuturo')
-    },
-    hub : (req,res) => {
-
-        return res.render ('hubrecircular')
-    },
-    podcast : (req,res) => {
-
-        return res.render ('podcast')
-    },
-    webinar : (req,res) => {
-
-        return res.render ('webinar')
-    },
-    voluntariado : (req,res) => {
-
-        return res.render ('voluntariado')
-    },
-    actividades :  (req,res) => {
-        const actividades = getData("actividades.json")
-        return res.render('actividades',{
-            actividades
-        })
-    },
-    novedades :  (req,res) => {
-        const novedades = getData("novedades.json")
-        return res.render('novedades',{
-            novedades
-        })
+    contact : (req,res) => {
+        return res.render('contact')
     }
 }

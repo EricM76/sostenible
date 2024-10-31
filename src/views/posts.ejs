@@ -7,9 +7,9 @@
               <h1>Proximas Actividades</h1>
             </div>
             <div class="cards--container">
-              <% novedades.forEach(({id, image, title, shortDescription, campaign})=> { %>
+              <% posts.forEach(({id, image, title, shortDescription, campaign})=> { %>
                 <div class="actividad--card">
-                  <a href="/novedades/<%= id %>">
+                  <a href="/posts/<%= id %>">
     
                     <div class="card--section">
                       <img src="<%= image %>" alt="Card image cap">

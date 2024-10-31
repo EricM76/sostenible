@@ -8,7 +8,7 @@
           <h1>Proximas Actividades</h1>
         </div>
         <div class="cards--container">
-          <% actividades.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+          <% activities.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
             <div class="actividad--card">
               <a href="/actividades/<%= id %>">
 
@@ -40,7 +40,7 @@
           <h1>Actividades Pasadas</h1>
         </div>
         <div class="cards--container">
-          <% actividades.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+          <% activities.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
             <div class="actividad--card">
               <a href="/actividades/<%= id %>">
 

@@ -96,6 +96,10 @@
     .cards--container{
         padding: 30px 35px;
     }
+    .actividad--card h3{
+        position: relative;
+        bottom: 0px;
+    }
 }
 @media (min-width: 1024px){
     .actividad--card {

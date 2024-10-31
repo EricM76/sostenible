@@ -37,5 +37,11 @@ module.exports = {
         return res.render('actividades',{
             actividades
         })
+    },
+    novedades :  (req,res) => {
+        const novedades = getData("novedades.json")
+        return res.render('novedades',{
+            novedades
+        })
     }
 }

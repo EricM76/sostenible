@@ -29,10 +29,10 @@
     text-decoration: none;
 }
 
-.card {
-    margin: 20px;
+.main_register {
+    margin: 100px;
 }
 
-.card-title {
+.main_register h4 {
     font-weight: 600;
 }

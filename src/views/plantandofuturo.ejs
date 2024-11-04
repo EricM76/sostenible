@@ -22,58 +22,34 @@
                 </div>
                 <article class="carousel--margin">
                   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-                    <div class="area__carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
-                        aria-current="true" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <div class="carousel-indicators">
+                      <% 
+                        const filteredPosts = posts.filter(post => post.campaign === "PLANTANDO FUTURO");
+                        filteredPosts.forEach((post, index) => { 
+                      %>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index %>" class="<%= index === 0 ? 'active' : '' %>" aria-label="Slide <%= index + 1 %>"></button>
+                      <% }); %>
                     </div>
                     <div class="carousel-inner">
-                      <div class="area__carousel-item">
-                        <picture>
-                          <source media="(min-width: 1024px)"
-                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
-                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
-                            alt="...">
-                        </picture>
-                        <div class="area__carousel--title">
-                          <a href="#"><p class="area__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p></a>
+                      <% filteredPosts.forEach((post, index) => { %>
+                        <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                          <picture>
+                            <img src="<%= post.image %>" class="d-block w-100" alt="...">
+                          </picture>
+                          <div class="carousel--title">
+                            <a href="/posts/<%= post.id %>">
+                              <p class="home__novedad"><%= post.title %></p>
+                              <p class="home__novedad--campaña"><%= post.campaign %></p>
+                            </a>
+                          </div>
                         </div>
-                      </div>
-            
-                      <div class="area__carousel-item active">
-                        <picture>
-                          <source media="(min-width: 1024px)"
-                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
-                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
-                            alt="...">
-                        </picture>
-                        <div class="area__carousel--title">
-                          <a href="#"><p class="area__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p></a>
-                        </div>
-            
-                      </div>
-                      <div class="area__carousel-item">
-                        <picture>
-                          <source media="(min-width: 1024px)"
-                            srcset="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100">
-                          <img src="/img/plantando/universidad-de-california-berkeley-1024x680.jpg" class="d-block w-100"
-                            alt="...">
-                        </picture>
-                        <div class="area__carousel--title">
-                          <a href="#"><p class="area__novedad">SE SUMA LA UNIVERSIDAD DE SAN FRANCISCO</p></a>
-                        </div>
-                      </div>
+                      <% }); %>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                      data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Next</span>
                     </button>

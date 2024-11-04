@@ -14,60 +14,30 @@
     <section class="carousel--margin">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-            aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" class="active"
-            aria-current="true" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-            aria-label="Slide 3"></button>
+          <% posts.forEach((post, index) => { %>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= index %>" class="<%= index === 0 ? 'active' : '' %>" aria-label="Slide <%= index + 1 %>"></button>
+          <% }); %>
         </div>
         <div class="carousel-inner">
-          <div class="carousel-item">
-            <picture>
-              <source media="(min-width: 1024px)"
-                srcset="https://graciads.com/wp-content/uploads/2021/05/1-1.jpg">
-              <img src="https://i.pinimg.com/1200x/89/54/ee/8954ee7021312e3d5cbf2cc93af4455f.jpg" class="d-block w-100"
-                alt="...">
-            </picture>
-            <div class="carousel--title">
-              <a href="/podcast"><p class="home__novedad">¡NUEVO CAPITULO DE PODCAST!</p>
-              <p class="home__novedad--campaña">FUNDACION DS</p></a>
+          <% posts.forEach((post, index) => { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+              <picture>
+                <img src="<%= post.image %>" class="d-block w-100" alt="...">
+              </picture>
+              <div class="carousel--title">
+                <a href="/posts/<%= post.id %>">
+                  <p class="home__novedad"><%= post.title %></p>
+                  <p class="home__novedad--campaña"><%= post.campaign %></p>
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div class="carousel-item active">
-            <picture>
-              <source media="(min-width: 1024px)"
-                srcset="https://concepto.de/wp-content/uploads/2020/11/importancia-de-reciclar-e1604431187998.jpg">
-              <img src="https://apoidea.co/sites/default/files/g1830.jpeg%20%282%29_1.jpg" class="d-block w-100"
-                alt="...">
-            </picture>
-            <div class="carousel--title">
-              <a href="/hubrecircular"><p class="home__novedad">PARTICIPA EN LA 46° CAMPAÑA DE</p>
-              <p class="home__novedad--campaña">HUBRECIRCULAR</p></a>
-            </div>
-
-          </div>
-          <div class="carousel-item">
-            <picture>
-              <source media="(min-width: 1024px)"
-                srcset="https://th.bing.com/th/id/R.4f7ee5db2de4d08c1553a1dbd8511596?rik=5TPCLeKMyMO5zw&pid=ImgRaw&r=0">
-              <img src="https://www.elnuevodia.com/resizer/G-LlyvGSvpJGgJhPyjqD_ZmQq64=/1200x1200/smart/filters:quality(95):format(png)/cloudfront-us-east-1.images.arcpublishing.com/gfrmedia/ONSH24IOQJCXDM3MPQ554ONY54.jpg" class="d-block w-100"
-                alt="...">
-            </picture>
-            <div class="carousel--title">
-              <a href="/plantandofuturo"><p class="home__novedad">CONVOCATORIA PLANTACION</p>
-              <p class="home__novedad--campaña">PLANTANDO FUTURO</p></a>
-            </div>
-          </div>
+          <% }); %>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-          data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
@@ -75,7 +45,7 @@
     </section>
     <section class="home--about">
       <img
-        src="https://s3-alpha-sig.figma.com/img/46b2/3fab/c448ec1593ac1181fe1d2e57b97247a1?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fYeS2gNqa~W5MA4RgEHgsSR4b0hhrpwWgh8EPq6Il5t6U3rdEpwLhhkNrKxt8jRYARYpBXsQ3D1Wn2hJAtPzud-z-CE61uiID43a3F4ZoP4iwordONWmhUuK7LifH~DnPlWJf9dfOtJw2BAzuA8QlLJuBGbJVTfI1E47liDHo5ieby6q2sPrmFLg-2LRwTyIZmXln4S4F-Z--6WaFDY040ezVJPyrHDHKMemuiT924R8NPXlXqtSx2wf6LEo8SODsars7a2AOGk~4r5wfbHzS36VnQye7qMOuC92p9haI1ag8f6~quHJcW5Mf6yfjeMhRQzNptDVnkIKQVzCDcac6w__"
+        src="/img/home/logo-about.png"
         alt="">
       <p>Somos la <span class="specialWord">Fundación para el Desarrollo Sostenible</span> y nos ocupamos de organizar
         iniciativas que promuevan el desarrollo sostenible en Córdoba y todo latinoamérica.</p>
@@ -104,16 +74,15 @@
     <section class="counter--container">
       <div class="counter--trees">
         <h1>NUESTROS LOGROS</h1>
-        <a href="/plantandofuturo"><div data-aos="fade-right">
+        <a href="/plantandofuturo">
         <h2>PLANTANDO FUTURO</h2>
         <div class="counter">
           <h3>148</h3>
           <h4>ÁRBOLES PLANTADOS</h4>
         </div></a>
       </div>
-      </div>
-      <a href=""><div class="counter--nurseries">
-        <div data-aos="fade-left">
+      <div class="counter--nurseries">
+        <a href="">
         <h2>INSTALACIÓN DE VIVEROS</h2>
         <div class="counter">
           <h3>43</h3>

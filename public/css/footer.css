@@ -20,8 +20,13 @@
     font-weight: 500;
     color: #ffff;
 }
-.footer--display, .footer--admin{
+.footer--display{
     display: none;
+}
+.footer--admin{
+    padding-left: 10px;
+    color: #ffff;
+    text-decoration: none;
 }
 @media (min-width: 768px){
     .footer p{
@@ -61,11 +66,5 @@
         color : #ffff; 
         margin: 0 auto;
     }
-    .footer--admin{
-        display: block;
-        padding-left: 10px;
-        color: #ffff;
-        text-decoration: none;
 
-    }
 }

@@ -8,21 +8,24 @@
   <main>
     <div class="nav_menu">
       <div class="box--admin">
-        <a href="/admin" class="admin">Administrador</a>
+        <p class="header--title">Administrador</p>
       </div>
       <div class="box--login">
-        <a href="/admin/login" class="login">Login</a>
+        <a href="/users/login" class="login">Login</a>
       </div>
     </div>
-    <div class="card">
-      <div class="card-body">
+    <div class="card--form">
         <h4 class="card-title">Registro</h4>
         <!-- Formulario para registrarse -->
-        <form>
+        <form class="access-form" method="POST">
           <!-- input Nombre Completo -->
           <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre Completo</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresá tu nombre completo"
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Ingresá tu nombre completo"
+              required />
+            <p class="form-text alert-hide">Obligatorio</p>
+            <label for="surname" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="surname" name="surname" placeholder="Ingresá tu nombre completo"
               required />
             <p class="form-text alert-hide">Obligatorio</p>
           </div>
@@ -34,15 +37,14 @@
           </div>
           <!-- input Contraseña -->
           <div class="mb-3">
-            <label for="passsword" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="passsword" name="passsword"
+            <label for="pass" class="form-label">Contraseña</label>
+            <input type="pass" class="form-control" id="pass" name="pass"
               placeholder="Ingresá una contraseña" value="" required />
             <p class="form-text alert-hide">Obligatorio</p>
           </div>
           <button type="submit" class="btn btn-outline-dark">Registrarme</button>
         </form>
       </div>
-    </div>
   </main>
     <!--  Pie del sitio -->
     <%- include('./partials/footer') %>

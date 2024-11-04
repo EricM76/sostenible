@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const {index,about,admin,contact} = require('../controllers/indexController')
+const indexController = require('../controllers/indexController');
+const checkAdmin = require ('../middlewares/checkAdmin');
+
 
 router
-    .get('/',index)   
-    .get('/admin', admin)
-    .get('/about',about)
-    .get('/contact',contact)
+    .get('/',indexController.index)   
+    .get('/admin',checkAdmin, indexController.admin)
+    .get('/about',indexController.about)
+    .get('/contact',indexController.contact)
 
 
 module.exports = router

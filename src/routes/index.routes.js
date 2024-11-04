@@ -10,5 +10,4 @@ router
     .get('/about',indexController.about)
     .get('/contact',indexController.contact)
 
-
 module.exports = router

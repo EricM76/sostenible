@@ -1,0 +1,26 @@
+[
+    {
+      "id": 1,
+      "type": "campaign",
+      "campaign": "FUNDACION DS",
+      "title": "HUB RECIRCULAR",
+      "shortDescription": "El HUB Recircular:  es un espacio donde interactúan cooperativas, empresas, instituciones , ONGs, ciudadanos apoyando el recupero y el aumento de índices de reciclaje en la ciudad de Córdoba",
+      "longFirstDescription": "En la ciudad, con 1,3 millones de habitantes, se produce 2000 TONELADAS diarias de residuos y se recicla es del 0.5% (Gob. Abierto, 2019). Mientras que en un estudio a recuperadores base (3 Cooperativas 62 miembros) solo recuperan en las calles o a la intemperie 5 toneladas mensuales cada una de diferentes materiales",
+      "longSecondDescription":"La falta de concientización, educación sobre los impactos ambientales, incentivos a los ciudadanos, políticas gubernamentales serias sobre el reciclaje, además de procesos de comercialización de comercio justo hacia recuperadores base, provocan una combinación que aporta a ver a los espacios públicos más contaminados",
+      "date": "",
+      "image": ""
+    },
+
+    {
+        "id": 2,
+        "type": "campaign",
+        "campaign": "FUNDACION DS",
+        "title": "HUB RECIRCULAR",
+        "shortDescription": "El HUB Recircular:  es un espacio donde interactúan cooperativas, empresas, instituciones , ONGs, ciudadanos apoyando el recupero y el aumento de índices de reciclaje en la ciudad de Córdoba",
+        "longFirstDescription": "En la ciudad, con 1,3 millones de habitantes, se produce 2000 TONELADAS diarias de residuos y se recicla es del 0.5% (Gob. Abierto, 2019). Mientras que en un estudio a recuperadores base (3 Cooperativas 62 miembros) solo recuperan en las calles o a la intemperie 5 toneladas mensuales cada una de diferentes materiales",
+        "longSecondDescription":"La falta de concientización, educación sobre los impactos ambientales, incentivos a los ciudadanos, políticas gubernamentales serias sobre el reciclaje, además de procesos de comercialización de comercio justo hacia recuperadores base, provocan una combinación que aporta a ver a los espacios públicos más contaminados",
+        "longThirdDescription": "La iniciativa Hub Recircular, al presenciar tal emergencia, busca incentivar comportamientos altruistas y de apoyo mutuo dentro de la comunidad cordobesa por medio de campañas de reciclaje masivas y capacitaciones constantes en todas las esferas de la sociedad. Todo con la esperanza de poder ver un mundo más verde",
+        "date": "",
+        "image": ""
+      }
+  ]

@@ -1,3 +1,5 @@
+const { getData, storeData } = require("../data");
+
 module.exports = {
     list: (req,res) => {
 

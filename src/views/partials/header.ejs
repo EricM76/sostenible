@@ -1,11 +1,11 @@
 <header id="up">
     <div class="header--container">
-        <a href="/"><picture class="header--logo">
-            <source media="(min-width: 1024px)"
-                 srcset="https://fundacionds.org/wp-content/uploads/2020/09/cropped-Logo-avatar-horizontal-.jpg">
-             <img src="https://s3-alpha-sig.figma.com/img/c931/8fab/e0e24df18f38ada170d2d94d42ccaa40?Expires=1730678400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=HdBIc5Um9EBOjhl1A3s0xr0CZhxwyJxptvOJZ~lOKx0de-EQ1nq80bt0F-vunRsGg2JgSx11sx-ozNuWOnCcCh5cP8umEa7p74fsgarFDGDD1pdUjftkezIGWzVnx9Yo--obe5PBPzQfJmDrtG7AwUWPCcRlhU4b-KCpNK8o9eRoehPiTTbB3a5ArkUtcV2vObpEST33ssMCxzACGKHmmf8pT0f1H6bFPcT479NMpu1HAJ4nAz5Yq46MQjxRi2RscKgh48De03fqTMaiZzC-yRhe467f0HqJ8oblYjVtZCXVsp9gBNH2F3VHgmkAaKyEfWWrr6xv0303Y7H2TS72Dw__"
-                class="d-block w-100" alt="...">
-        </picture></a>
+        <a href="/">
+            <picture class="header--logo">
+                <source media="(min-width: 1024px)" srcset="/img/home/logo-desktop.png">
+                <img src="/img/home/logo-mobile.png" class="d-block w-100" alt="Logo">
+            </picture>
+        </a>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <div class="header--burger"><i class="fa-solid fa-bars"></i></div>
@@ -21,14 +21,24 @@
                     <li><a href="/about">Contacto</a></li>
                 </div>
                 <div>
-                    <li class="nav--color"><a href="/actividades"><i class="fa-solid fa-star"></i> Actividades</a></li>
+                    <li class="nav--color"><a href="/posts/activities"><i class="fa-solid fa-star"></i> Actividades</a>
+                    </li>
                     <li class="nav--color"><a href="/voluntariado"><i class="fa-solid fa-star"></i> Voluntariado</a>
                     </li>
                     <li class="nav--color"><a href="/"><i class="fa-solid fa-star"></i> Quiero sumarme</a></li>
+                    <% if (locals.userLogin && userLogin.rol=="admin" ) { %>
+
+                        <li><a href="/admin">Admin</a></li>
+                        <li>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                <i class="fa-solid fa-power-off"></i>
+                            </a>
+                        </li>
+                        <% } %>
                 </div>
             </ul>
         </nav>
-        
+
     </div>
     <nav class="header__nav--desktop">
         <ul class="menu--desktop">
@@ -40,14 +50,46 @@
                 <li><a href="/webinars">Webinar</a></li>
                 <li><a href="/about">Contacto</a></li>
             </div>
-            <div class="li__desktop--green">
-                <li class="nav__desktop--color"><a href="/activities"><i class="fa-solid fa-star"></i> Actividades</a></li>
-                <li class="nav__desktop--color"><a href="/volunteers"><i class="fa-solid fa-star"></i> Voluntariado</a>
-                </li>
-                <li class="nav__desktop--color"><a href="/"><i class="fa-solid fa-star"></i> Quiero sumarme</a></li>
+
+            <div>
+                <div class="li__desktop--green">
+                    <li class="nav__desktop--color"><a href="/posts/activities"><i class="fa-solid fa-star"></i>
+                            Actividades</a>
+                    </li>
+                    <li class="nav__desktop--color"><a href="/volunteers"><i class="fa-solid fa-star"></i>
+                            Voluntariado</a>
+                    </li>
+                    <li class="nav__desktop--color"><a href="/"><i class="fa-solid fa-star"></i> Quiero sumarme</a></li>
+                    <% if (locals.userLogin && userLogin.rol=="admin" ) { %>
+
+                        <li><a href="/admin">Admin</a>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                                <i class="fa-solid fa-power-off"></i>
+                            </a>
+                        </li>
+                        <% } %>
+                </div>
             </div>
         </ul>
     </nav>
 </header>
+<!-- Modal -->
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirmación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ¿Seguro quieres salir?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <a href="/users/logout" class="btn btn-danger">Salir</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 </html>

@@ -64,15 +64,22 @@
     justify-content: center;
     gap: 10px;
 }
-
+.card--body{
+    width: 300px;
+    padding: 20px;
+}
 .box--card_img {
-    width: 60%;
+    width: 80%;
     margin-bottom: 10px;
+    
 }
 
 .box--card_botones {
     display: flex;
     justify-content: space-between;
+    padding: 0 20px;
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
 .boton_editar {

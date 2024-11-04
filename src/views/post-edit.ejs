@@ -1,0 +1,72 @@
+<%- include('./partials/head',{
+    title : 'Agregar'
+  }) %>
+  
+
+<body>
+    <%- include('./partials/header') %>
+
+<main>
+                <div class="card--form">
+                        <h4 class="text-center">Añadir</h4>
+                        <form method="POST" action="/posts/update/<%= id %>?_method=PUT" enctype="multipart/form-data">
+                            <div class="mb-4">
+                                <label for="type" class="form-label">Tipo del anuncio</label>
+                                <select id="type" name="type" class="form-control" required>
+                                    <option value="" disabled selected>Seleccione un tipo</option>
+                                    <option value="post" <%= post.type === 'post' ? 'selected' : '' %>>Anuncio</option>
+                                    <option value="activity" <%= post.type === 'activity' ? 'selected' : '' %>>Actividad</option>
+                                    <option value="training" <%= post.type === 'training' ? 'selected' : '' %>>Capacitación</option>
+                                </select>
+                                <p class="form-text alert-hide">Obligatorio</p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="campaign" class="form-label">Campaña</label>
+                                <select id="campaign" name="campaign" class="form-control" required>
+                                    <option value="" disabled selected>Seleccione un tipo</option>
+                                    <option value="FUNDACION DS" <%= post.campaign === 'FUNDACION DS' ? 'selected' : '' %>>Fundación DS</option>
+                                    <option value="PLANTANDO FUTURO" <%= post.campaign === 'PLANTANDO FUTURO' ? 'selected' : '' %>>Plantando Futuro</option>
+                                    <option value="HUBRECIRCULAR" <%= post.campaign === 'HUBRECIRCULAR' ? 'selected' : '' %>>Hubrecircular</option>
+                                    <option value="GREEN DRINKS" <%= post.campaign === 'GREEN DRINKS' ? 'selected' : '' %>>Green Drinks</option>
+                                    <option value="BARRIO SUSTENTABLE" <%= post.campaign === 'BARRIO SUSTENTABLE' ? 'selected' : '' %>>Barrio Sustentable</option>
+                                    <option value="ODS" <%= post.campaign === 'ODS' ? 'selected' : '' %>>ODS</option>
+                                </select>
+                                <p class="form-text alert-hide">Obligatorio</p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="title" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="title" name="title" placeholder="Título" value="<%= post.title %>" required />
+                                <p class="form-text alert-hide">Obligatorio</p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="shortDescription" class="form-label">Pequeña Descripción</label>
+                                <p class="form-text alert-hide">(Descripción que se muestra antes de entrar al anuncio. <br> En caso de dejarlo vacío, se visualizará el primer fragmento de la descripción.)</p>
+                                <input type="text" class="form-control" id="shortDescription" name="shortDescription" placeholder="Pequeña descripción" maxlength="100" value="<%= post.shortDescription %>" required />
+                            </div>
+                            <div class="mb-4">
+                                <label for="description" class="form-label">Descripción</label>
+                                <textarea id="description" name="description" class="form-control" rows="4" placeholder="Descripción" required><%= post.description %></textarea>
+                                <p class="form-text alert-hide">Obligatorio</p>
+                            </div>
+                            <div class="mb-4">
+                                <label for="date" class="form-label">Fecha</label>
+                                <input type="date" class="form-control" id="date" name="date" value="<%= post.date %>"/>
+                            </div>
+                            <div class="mb-4">
+                                <label for="image" class="form-label">Agregar imagen</label>
+                              <input name="image" type="file" class="form-control" id="image"
+                              >
+                              <small id="image-error" class="text-danger ms-2" hidden>Error al cargar el nombre del producto</small>
+                                <p class="form-text alert-hide">Obligatorio</p>
+                            </div>
+                            <button type="submit" class="btn btn-outline-dark btn-block">Actualizar post</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</main>
+    
+    <%- include('./partials/footer') %>
+</body>

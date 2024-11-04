@@ -9,6 +9,8 @@ const PORT = 3000;
 const indexRoutes = require('./routes/index.routes.js');
 const podcastRoutes = require('./routes/podcast.routes.js');
 const webinarRoutes = require ('./routes/webinars.routes.js');
+const hubRoutes = require ('./routes/hub.routes.js');
+const plantingRoutes = require('./routes/planting.routes.js');
 const postsRoutes = require('./routes/posts.routes.js');
 const volunteersRoutes = require('./routes/volunteers.routes.js')
 const usersRoutes = require('./routes/users.routes.js')
@@ -40,6 +42,8 @@ app.use(checkLocals)
 app.use('/', indexRoutes);
 app.use('/podcasts',podcastRoutes);
 app.use('/webinars', webinarRoutes);
+app.use('/hubrecircular',hubRoutes);
+app.use('/plantandofuturo',plantingRoutes);
 app.use('/volunteers', volunteersRoutes);
 app.use('/posts', postsRoutes);
 app.use('/users', usersRoutes);

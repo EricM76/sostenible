@@ -3,6 +3,6 @@ const { getData, storeData } = require("../data");
 
 module.exports = {
     hub : (req,res) => {
-
-        return res.render('hubrecircular')},
+        const posts = getData("posts.json");
+        return res.render('hubrecircular', {posts})},
 }

@@ -1,18 +1,10 @@
 [
   {
-    "id": 1,
-    "name": "Will",
-    "surname": "Smith",
-    "rol": "admin",
-    "email": "admin@email.com",
-    "pass": "123456"
-  },
-  {
     "id": 2,
-    "name": "Carlos",
-    "surname": "Carlos",
+    "name": "Esteban",
+    "surname": "Acosta",
     "rol": "admin",
-    "email": "Carlos@email.com",
-    "pass": "$2a$12$gFrqielKhY4rkdzQTWsENekxmhTTJoCqPDi95tezZ8QwMKokie5fC"
+    "email": "esteban@gmail.com",
+    "pass": "$2a$12$36hQ6wpS33rYaOazK4TDz.IjPlZag5YGEGNLgun6pWC9UW8k/R3b6"
   }
 ]

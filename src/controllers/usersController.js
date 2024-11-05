@@ -43,15 +43,14 @@ module.exports = {
 
         const { email, pass } = req.body;
 
-        const user = compareSync(user => user.email == email)
+        const user = users.find(user => user.email == email)
 
-        if (user && user.pass == pass) {
+        if (user && compareSync(pass, user.pass)) {
             req.session.userLogin = {
                 id: user.id,
                 name: user.name,
-                rol :  user.rol
-
-            }
+                rol: user.rol
+            };
 
             return res.redirect('/')
         } else {

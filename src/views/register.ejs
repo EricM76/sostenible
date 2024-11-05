@@ -20,27 +20,33 @@
         <form class="access-form" method="POST">
           <!-- input Nombre Completo -->
           <div class="mb-3">
-            <label for="name" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Ingresá tu nombre completo"
-              required />
+            <label for="name">Nombre</label>
+								<input type="text" id="name" name="name" placeholder="Ingresá tu nombre" value="<%= locals.old && old.name ? old.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>">
+								<small id="name-error" class="text-danger ms-2" ><%= (locals.errors && errors.name) ? errors.name.msg : null %></small>
             <p class="form-text alert-hide">Obligatorio</p>
-            <label for="surname" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="surname" name="surname" placeholder="Ingresá tu nombre completo"
-              required />
+            <label for="name">Apellido</label>
+								<input type="text" id="surname" name="surname" placeholder="Ingresá tu apellido" value="<%= locals.old && old.name ? old.name : null %>" class="form-control <%= locals.errors && errors.name ? 'is-invalid' : null %>">
+								<small id="surname-error" class="text-danger ms-2" ><%= (locals.errors && errors.name) ? errors.name.msg : null %></small>
             <p class="form-text alert-hide">Obligatorio</p>
           </div>
           <!-- input Email -->
           <div class="mb-3">
             <label for="email" class="form-label">Correo</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Ingresá tu correo" required />
-            <p class="form-text alert-hide">Obligatorio</p>
+            <input type="text" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" placeholder="Ingresá tu email" value="<%= locals.old && old.email ? old.email : null %>">
+								<small id="email-error" class="text-danger ms-2" ><%= (locals.errors && errors.email) ? errors.email.msg : null %></small>
           </div>
           <!-- input Contraseña -->
           <div class="mb-3">
             <label for="pass" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="pass" name="pass"
-              placeholder="Ingresá una contraseña" value="" required />
+            <input type="pass" id="pass" name="pass" placeholder="pass" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+								<small id="pass-error" class="text-danger ms-2" ><%= (locals.errors && errors.pass) ? errors.pass.msg : null %></small>
             <p class="form-text alert-hide">Obligatorio</p>
+          </div>
+          <div class="field-group">
+            <label for="pass2">Reingresá la contraseña</label>
+            <input type="pass" id="pass" name="pass2" placeholder="Reingrese la contraseña" class="form-control <%= locals.errors && errors.pass2 ? 'is-invalid' : null %>">
+            <small id="pass2-error" class="text-danger ms-2" ><%= (locals.errors && errors.pass2) ? errors.password2.msg : null %></small>
+
           </div>
           <button type="submit" class="btn btn-outline-dark">Registrarme</button>
         </form>

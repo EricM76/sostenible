@@ -1,0 +1,50 @@
+<%- include('./partials/head',{ title : 'Novedades' }) %>
+
+    <body>
+        <%- include('./partials/header') %>
+        <main class="actividades">
+            <div class="container--h1">
+              <h1>Novedades</h1>
+            </div>
+            <div class="cards--container">
+              <% posts.forEach(({id, image, title, shortDescription, description, campaign, date})=> { %>
+                <div class="actividad--card">
+                  <a href="/posts/<%= id %>">
+    
+                    <div class="card--section">
+                      <img src="<%= image %>" alt="Card image cap">
+                      <div class="card-body">
+                        <h2 class="card-title">
+                          <%= title %>
+                        </h2>
+                        <div class="card__container--p">
+                          <p>
+                            <%= shortDescription ? shortDescription : description %>
+                          </p>
+                        </div>
+    
+                      </div>
+                    </div>
+                  </a>
+                  <div class="card-footer">
+                    <h3>
+                      <%= campaign %>
+                    </h3>
+                    <% if (date) { %>
+                    <small class="date"><%= date %></small>
+                    <% } %>
+                  </div>
+                </div>
+                <% }) %>
+            </div>
+        </main>
+
+
+
+
+
+
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>

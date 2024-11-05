@@ -2,12 +2,16 @@
   "dependencies": {
     "body-parser": "^1.20.3",
     "ejs": "^3.1.10",
-    "express": "^4.21.1"
+    "express": "^4.21.1",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.5-lts.1"
   },
   "name": "proyecto-integrador-main",
   "description": "** Fundacion Puerta 18 **",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
   "devDependencies": {
     "tailwindcss": "^3.4.14"
   },

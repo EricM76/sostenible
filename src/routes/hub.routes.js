@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const hubController = require('../controllers/hubController')
+const {hub} = require('../controllers/hubController')
 
-router.get('/hubrecircular', hubController.hub)
+// /podcasts
+
+router
+    .get('/',hub)
 
 module.exports = router

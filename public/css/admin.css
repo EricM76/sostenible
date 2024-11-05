@@ -10,7 +10,7 @@
 /* Menu de nav */
 
 .nav_menu {
-    background-color: #33a6a6;
+    background-color: var(--color_aqua);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -89,7 +89,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #7b548c;
+    background-color: var(--color_violeta);
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -146,7 +146,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #7b548c;
+    background-color: var(--color_violeta);
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -184,7 +184,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #7b548c;
+    background-color: var(--color_violeta);
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -227,7 +227,7 @@
 
 .add_opciones .opciones {
     border-radius: 5px;
-    background-color: #33a6a6;
+    background-color: var(--color_aqua);
     margin-bottom: 0;
     padding: 10px 30px;
 }

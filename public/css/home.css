@@ -221,7 +221,7 @@
 }
 
 .home--projects {
-    background-image: url(https://s3-alpha-sig.figma.com/img/01e4/5d74/d72dc42a437a546a78318f1181f98185?Expires=1730073600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=fNbKKWTjUW4u8S6lcv7Kij-1aOqdulwLwvnSv~LPBuN7I4s2gxhSdgzvJnJC2j8wAPivcFqGO6htMS46NFk2ZFWRjqRSpyCrUksiGweYiv2vowNEWCZl6jQwSoUf3buZKCWYO4ylLPvZh2ZQsm6xSE8OhFU3DNDBH2jIbtHPyjXdL5tgyiAApY8MlPXEcyxyAShSfNKhWk3BhRo60ZouE-57wY67omGOxSeMo-RpxcJ0mzIXRbkJR0UxVl0RU2~ELGbChaprfujpklPdC5braPqRbu4IVoUs1K4OrKRh0jWY6EkRR2UrZeh1Pifxh2QUB-7pi1VxmZExWswJwFS5bA__);
+    background-image: url('/img/home/background-projects.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -369,6 +369,10 @@ a:hover {
     opacity: 0.5;
 }
 
+.partners--card img{
+    width: 200px;
+    height: 100px;
+}
 @media (min-width: 768px) {
     .home p {
         font-size: 2em;

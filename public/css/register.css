@@ -36,7 +36,7 @@
     border-radius: 30px;
 }
 
-.card-title {
+.main_register h4 {
     font-weight: 600;
 }
 @media (min-width: 1024px){

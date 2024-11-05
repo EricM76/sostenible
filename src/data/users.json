@@ -6,5 +6,13 @@
     "rol": "admin",
     "email": "admin@email.com",
     "pass": "123456"
+  },
+  {
+    "id": 2,
+    "name": "Carlos",
+    "surname": "Carlos",
+    "rol": "admin",
+    "email": "Carlos@email.com",
+    "pass": "$2a$12$gFrqielKhY4rkdzQTWsENekxmhTTJoCqPDi95tezZ8QwMKokie5fC"
   }
 ]

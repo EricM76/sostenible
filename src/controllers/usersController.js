@@ -1,4 +1,5 @@
-const path = require('path');
+const {validationResult} = require('express-validator');
+const {hashSync, compareSync} = require('bcryptjs');
 const { getData, storeData } = require("../data");
 
 module.exports = {
@@ -9,20 +10,30 @@ module.exports = {
      return res.render ('register');
     },
     processRegister: (req, res) => {
+        const errors = validationResult(req);
         const users = getData("users.json"); 
         const { name, surname, email, pass,  } = req.body;
 
+        if(errors.isEmpty()){
         const newUser = {
             id: +users[users.length - 1].id + 1,
             name: name.trim(),
             surname: surname.trim(),
             rol: "admin",
             email: email.trim(),
-            pass: pass.trim(),
+            pass: hashSync(pass, 12),
           }; 
+
           users.push(newUser);
+
           storeData(users, "users.json");
           return res.redirect('/');
+        }else{
+            return res.render('register',{
+                old : req.body,
+                errors : errors.mapped()
+            })
+        }
     },
     login: (req, res) => {
         return res.render('login')
@@ -32,7 +43,7 @@ module.exports = {
 
         const { email, pass } = req.body;
 
-        const user = users.find(user => user.email == email)
+        const user = compareSync(user => user.email == email)
 
         if (user && user.pass == pass) {
             req.session.userLogin = {

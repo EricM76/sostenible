@@ -1,0 +1,29 @@
+<%- include('./partials/head',{ title : 'Novedades' }) %>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <body>
+        <%- include('./partials/header') %>
+        <main class="detail">
+
+            <img src="<%= image %>" alt="Card image cap">
+
+
+            <div>
+                <h1>
+                    <%= title %>
+                </h1>
+
+                <p>
+                    <%= description %>
+                </p>
+                <h2>
+                    <%= campaign %>
+                </h2>
+                <% if (date) { %>
+                    <small class="date"><%= date %></small>
+                    <% } %>
+            </div>
+        </main>
+            <%- include('./partials/footer') %>
+    </body>
+
+    </html>

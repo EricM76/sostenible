@@ -87,6 +87,10 @@
     padding: 5%;
 }
 
+.onu--img img {
+    height: 300px;
+}
+
 .webinar__description {
     margin: 0 5% 2% 5%
 }
@@ -127,7 +131,7 @@
     margin: 1% 10% 8% 10%;
     background-color: rgba(75, 141, 127, 0.5);
     border-radius: 15px;
-    padding: 10%;
+    padding: 5%;
 }
 
 .webinar__actividad p {

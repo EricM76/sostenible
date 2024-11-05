@@ -1,31 +1,21 @@
-const path = require ('path')
+const {getData} = require('../data')
 
 module.exports = {
     index : (req,res) => {
-
-        return res.render('home')
+        const posts = getData("posts.json");
+        return res.render('home', { posts })
     },
     admin : (req,res) => {
+        const posts = getData("posts.json")
+        return res.render('admin',{
+            posts,
 
-        return res.render('admin')
+        })
     },
-    contacto : (req,res) => {
-        return res.render('contacto')
+    about : (req,res) => {
+        return res.render('about')
     },
-    plantando : (req,res) => {
-
-        return res.render('plantandofuturo')
-    },
-    hub : (req,res) => {
-
-        return res.render ('hubrecircular')
-    },
-    podcast : (req,res) => {
-
-        return res.render ('podcast')
-    },
-    webinar : (req,res) => {
-
-        return res.render ('webinar')
+    contact : (req,res) => {
+        return res.render('contact')
     },
 }

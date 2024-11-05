@@ -29,10 +29,24 @@
     text-decoration: none;
 }
 
-.main_register {
-    margin: 100px;
+.card--form {
+    margin: 50px;
+    padding: 20px;
+    background-color: rgba(64, 64, 64, 0.3);
+    border-radius: 30px;
 }
 
 .main_register h4 {
     font-weight: 600;
+}
+@media (min-width: 1024px){
+    .card--form{
+        margin: 70px 200px;
+        padding: 20px 100px;
+    }
+}
+@media (min-width: 1440px){
+    .card--form{
+        margin: 70px 400px;
+    }
 }

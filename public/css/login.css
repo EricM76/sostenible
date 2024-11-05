@@ -28,11 +28,6 @@
     color: #fff;
     text-decoration: none;
 }
-
-.main_login {
-    margin: 100px;
-}
-
-.main_login h4 {
-    font-weight: 600;
+.header--title{
+    margin: 0;
 }

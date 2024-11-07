@@ -41,6 +41,7 @@
 .carousel-item img {
     filter: brightness(0.3);
     height: 250px;
+    object-fit: cover;
 }
 
 .carousel-indicators button {
@@ -386,11 +387,6 @@ a:hover {
     .carousel-item img {
         height: 450px;
     }
-
-    .carousel-inner {
-        border-radius: 40px;
-    }
-
     .home--about p {
         font-size: 1.3em;
         padding: 20px 50px 10px;
@@ -412,10 +408,12 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
-
+    .carousel-inner {
+        border-radius: 40px;
+    }
     .home--phrase {
-        font-size: 0.5em;
-        padding: 35px 200px 35px;
+        font-size: 0.7em;
+        padding: 100px 200px 100px;
     }
 
     .home--phrase p {
@@ -423,7 +421,7 @@ a:hover {
     }
 
     .home p {
-        padding: 0 40px;
+        padding: 0px;
     }
 
     .home__novedad {
@@ -471,8 +469,8 @@ a:hover {
         flex-direction: row;
         justify-content: center;
         gap: 50px;
-        padding: 100px 0 80px;
-        background-color: #51ffff;
+        padding: 150px 0 150px;
+        background-image: url(/img/home/background-counter.jpeg);
     }
 
     .counter--trees,
@@ -552,6 +550,7 @@ a:hover {
 @media (min-width: 1024px){
     .carousel-item img {
         height: 300px;
+        object-fit: cover;
     }
     .carousel--margin {
         padding: 20px 350px;

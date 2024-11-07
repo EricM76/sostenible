@@ -31,12 +31,12 @@
   },
   {
     "id": 4,
-    "type": "post",
+    "type": "activity",
     "campaign": "HUB RECIRCULAR",
-    "title": "1111111111111",
-    "shortDescription": "",
-    "description": "111111111111111",
-    "date": "",
-    "image": "/images/image-1730813811310.webp"
+    "title": "Nueva Convocatoria",
+    "shortDescription": "Nueva Convocatoria",
+    "description": "Nueva Convocatoria Hub recircular",
+    "date": "2024-11-15",
+    "image": "/images/image-1730995009065.jpg"
   }
 ]

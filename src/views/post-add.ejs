@@ -7,9 +7,11 @@
     <%- include('./partials/header') %>
 
 <main>
-                <div class="card--form">
+                <div class="card__form--add">
                         <h4 class="text-center">Añadir</h4>
                         <form method="POST" action="/posts/add" enctype="multipart/form-data">
+                            <div class="post__form--add">
+                                <div>
                             <div class="mb-4">
                                 <label for="type" class="form-label">Tipo del anuncio</label>
                                 <select id="type" name="type" class="form-control" required>
@@ -20,6 +22,7 @@
                                 </select>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
+                        </div>
                             <div class="mb-4">
                                 <label for="campaign" class="form-label">Campaña</label>
                                 <select id="campaign" name="campaign" class="form-control" required>
@@ -38,16 +41,20 @@
                                 <input type="text" class="form-control" id="title" name="title" placeholder="Título" required />
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
+                        </div>
+                        <div class="container__short--description">
                             <div class="mb-4">
                                 <label for="shortDescription" class="form-label">Pequeña Descripción</label>
                                 <p class="form-text alert-hide">(Descripción que se muestra antes de entrar al anuncio. <br> En caso de dejarlo vacío, se visualizará el primer fragmento de la descripción.)</p>
                                 <input type="text" class="form-control" id="shortDescription" name="shortDescription" placeholder="Pequeña descripción" maxlength="100" />
                             </div>
+                        </div>
                             <div class="mb-4">
                                 <label for="description" class="form-label">Descripción</label>
                                 <textarea id="description" name="description" class="form-control" rows="4" placeholder="Descripción" required></textarea>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
+                            <div class="post__form--date">
                             <div class="mb-4">
                                 <label for="date" class="form-label">Fecha</label>
                                 <input type="date" class="form-control" id="date" name="date"/>
@@ -59,6 +66,7 @@
                               <small id="image-error" class="text-danger ms-2" hidden>Error al cargar el nombre del producto</small>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
+                        </div>
                             <button type="submit" class="btn btn-outline-dark btn-block">Enviar</button>
                         </form>
                     </div>

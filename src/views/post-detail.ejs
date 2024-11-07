@@ -4,20 +4,26 @@
         <%- include('./partials/header') %>
         <main class="detail">
 
-            <img src="<%= image %>" alt="Card image cap">
+            <div class="box-detail">
 
-
-            <div>
-                <h1>
-                    <%= title %>
-                </h1>
-
-                <p>
-                    <%= description %>
-                </p>
-                <h2>
+                <h2 class="title-detail">
                     <%= campaign %>
                 </h2>
+
+                <img src="<%= image %>" alt="Card image cap">
+
+                <div class="box-description">
+                    <h1 class="title-description">
+                        <%= title %>
+                    </h1>
+                    <div class="box-hr">
+                        <hr>
+                    </div>
+                    <p>
+                        <%= description %>
+                    </p>
+                </div>
+                
                 <% if (date) { %>
                     <small class="date"><%= date %></small>
                     <% } %>

@@ -87,18 +87,25 @@
                         <h2 class="contadores_title">Contadores</h2>
                     </div>
                     <!-- Contadores -->
-                    <article class="box_contadores">
+                    <div class="box_contadores">
                         <div class="box_contador">
-                            <img src="https://pic.pnnet.dev/300x200?text=...&tc=white&bgc=grey"
-                                alt="imagen de contador">
-                            <div class="boton-agregar_contador">
-                                <a href="" role="button"><i class="fa-solid fa-plus"></i></a>
+                            <div class="boton-aumentar_contador">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                            <input type="number" value="0">
+                            <div class="boton-disminuir_contador">
+                                <i class="fa-solid fa-minus"></i>
                             </div>
                         </div>
-                    </article>
+                        <div class="boton-agregar_nuevo_contador">
+                            <button class="btn btn-outline-dark" type="button">
+                                <a href=""><i class="fa-solid fa-plus"></i>Añadir</a>
+                            </button>
+                        </div>
+                    </div>
                 </section>
                 <!-- Sección para Añadir -->
-<!--               <section class="section_add">
+                <!--               <section class="section_add">
                     <div class="add_header">
                         <h3 class="add_title">Añadir</h3>
                     </div>
@@ -109,7 +116,7 @@
                             <li><a href="#"><i class="fa-solid fa-plus"></i>Añadir actividad</a></li>
                         </ul>
                     </div>
-                </section>--> 
+                </section>-->
             </main>
             <!--  Pie del sitio -->
             <%- include('./partials/footer') %>

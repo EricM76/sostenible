@@ -1,0 +1,36 @@
+.card__form--add{
+    margin: 20px;
+    background-color: rgba(64, 64, 64, 0.3);
+    padding: 20px 20px;
+    border-radius: 30px;
+}
+@media (min-width: 768px){
+.post__form--add{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    align-items: center;
+}
+
+.container__short--description{
+    display: flex;
+    justify-content: center;
+}
+.post__form--date{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15%;
+}
+}
+@media (min-width: 1024px){
+    .card__form--add{
+        margin: 20px 150px;
+        padding: 20px 60px;
+    }
+}
+@media (min-width: 1440px){
+    .card__form--add{
+        margin: 20px 300px;
+        padding: 20px 150px;
+    }
+}

@@ -31,7 +31,9 @@
                 <h3>
                   <%= campaign %>
                 </h3>
-                <small class="date"><%= date %></small>
+                <% if (date) { %>
+                  <small class="date"><%= date %></small>
+                  <% } %>
               </div>
             </div>
             <% }) %>
@@ -63,7 +65,9 @@
                 <h3>
                   <%= campaign %>
                 </h3>
-                <small class="date"><%= date %></small>
+                <% if (date) { %>
+                  <small class="date"><%= date %></small>
+                  <% } %>
               </div>
             </div>
             <% }) %>

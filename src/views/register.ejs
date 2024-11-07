@@ -2,9 +2,7 @@
   title : 'Registro'
 }) %>
 
-<body class="register">
-    <!-- Cabecera del sitio -->
-    <%- include('./partials/header') %>
+
   <main>
     <div class="nav_menu">
       <div class="box--admin">
@@ -38,12 +36,12 @@
           <!-- input Contraseña -->
           <div class="mb-3">
             <label for="pass" class="form-label">Contraseña</label>
-            <input type="pass" id="pass" name="pass" placeholder="Ingrese una contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
+            <input type="password" id="pass" name="pass" placeholder="Ingrese una contraseña" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>">
 								<small id="pass-error" class="text-danger ms-2" ><%= (locals.errors && errors.pass) ? errors.pass.msg : null %></small>
           </div>
           <div class="field-group">
             <label for="pass2">Reingrese la contraseña</label>
-            <input type="pass" id="pass2" name="pass2" placeholder="Reingrese la contraseña" class="form-control <%= locals.errors && errors.pass2 ? 'is-invalid' : null %>">
+            <input type="password" id="pass2" name="pass2" placeholder="Reingrese la contraseña" class="form-control <%= locals.errors && errors.pass2 ? 'is-invalid' : null %>">
             <small id="pass2-error" class="text-danger ms-2" ><%= (locals.errors && errors.pass2) ? errors.pass2.msg : null %></small>
 
           </div>
@@ -51,8 +49,6 @@
         </form>
       </div>
   </main>
-    <!--  Pie del sitio -->
-    <%- include('./partials/footer') %>
 </body>
 
 </html>

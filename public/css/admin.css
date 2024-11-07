@@ -1,5 +1,6 @@
 .admin {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .admin main {
@@ -9,7 +10,7 @@
 /* Menu de nav */
 
 .nav_menu {
-    background-color: #33A6A6;
+    background-color: var(--color_aqua);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -64,14 +65,15 @@
     justify-content: center;
     gap: 10px;
 }
-.card--body{
+
+.card--body {
     width: 300px;
     padding: 20px;
 }
+
 .box--card_img {
     width: 80%;
     margin-bottom: 10px;
-    
 }
 
 .box--card_botones {
@@ -87,7 +89,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #7B548C;
+    background-color: var(--color_violeta);
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -116,7 +118,6 @@
 
 /* Sección de Contadores */
 
-
 .contadores_header {
     display: flex;
     justify-content: center;
@@ -129,28 +130,26 @@
 .box_contadores {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    align-content: center;
     gap: 10px;
+    flex-direction: column;
 }
 
 /* Contador */
 .box_contador {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    display: inline-flex;
+    gap: 5px;
 }
 
-.boton-agregar_contador {
+.boton-aumentar_contador {
     display: inline-block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #7B548C;
+    background-color: var(--color_violeta);
     text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    position: relative;
-    bottom: 20px;
 }
 
 @keyframes shadow-drop-2-center {
@@ -169,16 +168,42 @@
     }
 }
 
-.boton-agregar_contador:hover {
+.boton-aumentar_contador:hover {
     background-color: #634370;
-    animation: shadow-drop-2-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-.boton-agregar_contador i {
+.boton-aumentar_contador i {
     color: #fff;
     font-size: 24px;
     line-height: 40px;
+}
+
+.boton-disminuir_contador {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color_violeta);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-disminuir_contador:hover {
+    background-color: #634370;
+    animation: shadow-drop-2-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.boton-disminuir_contador i {
+    color: #fff;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.boton-agregar_nuevo_contador {
+    display: inline-flex;
+    justify-content: center;
 }
 
 /* Sección para Añadir */
@@ -202,7 +227,7 @@
 
 .add_opciones .opciones {
     border-radius: 5px;
-    background-color: #33A6A6;
+    background-color: var(--color_aqua);
     margin-bottom: 0;
     padding: 10px 30px;
 }

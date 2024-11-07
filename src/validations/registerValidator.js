@@ -10,7 +10,7 @@ module.exports = [
     .withMessage("Solo caracteres alfabéticos"),
     check("surname")
     .notEmpty()
-    .withMessage("El nombre es obligatorio").bail()
+    .withMessage("El apellido es obligatorio").bail()
     .isAlpha()
     .withMessage("Solo caracteres alfabéticos"),
   body("email")
@@ -26,9 +26,9 @@ module.exports = [
         return true
     }).withMessage("El email ya se encuentra registrado"),
   check("pass")
-    .notEmpty().withMessage("El password es obligatorio").bail()
+    .notEmpty().withMessage("La contraseña es obligatoria").bail()
     .matches(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/).withMessage('Debe tener una mayúscula, minúscula, caracter especial y un número. Mínimo 8 caracteres'),
-  body("pass")
+  body("pass2")
   .notEmpty().withMessage("Reingresá tu contraseña").bail()
   .custom((value, { req }) => {
     if (value !== req.body.pass) {
@@ -36,5 +36,5 @@ module.exports = [
     }
     return true;
   })
-  .withMessage('Las contraseñas no coinciden 2'),
+  .withMessage('Las contraseñas no coinciden'),
 ];

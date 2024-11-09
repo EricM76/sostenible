@@ -1,5 +1,6 @@
 .footer{
     background-color: #4B8D7F;
+    padding-bottom: 20px;
 }
 .logos--container{
     display: flex;
@@ -58,7 +59,7 @@
         padding: 10px 0 0;
     }
     .footer{
-        padding: 20px 0 0;
+        padding: 20px 0;
     }
     .footer--display a{
         text-decoration: none;

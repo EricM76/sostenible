@@ -7,130 +7,127 @@ module.exports = {
   activities: async (req, res) => {
     try {
       const category = await Category.findOne({
-        name : 'Actividad'
-      })
+        name: "Actividad",
+      });
       const activities = await Post.find({
-        category : category.id
-      }).populate('category').populate('campaign')
+        category: category.id,
+      })
+        .populate("category")
+        .populate("campaign");
       return res.render("activities", { activities });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
-  
   },
   posts: async (req, res) => {
     try {
-      const posts = await Post.find().populate('campaign').populate('category')
+      const posts = await Post.find().populate("campaign").populate("category");
       return res.render("posts", {
         posts,
       });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
-   
   },
   detail: async (req, res) => {
     try {
       const { post_id } = req.params;
 
-      const post = await Post.findById(post_id).populate('campaign').populate('category')
-  
+      const post = await Post.findById(post_id)
+        .populate("campaign")
+        .populate("category");
+
       return res.render("post-detail", {
         post,
       });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
   },
   add: async (req, res) => {
     try {
       const categories = await Category.find();
-      const campaigns = await Campaign.find() ;
+      const campaigns = await Campaign.find();
 
-      return res.render("post-add",{
+      return res.render("post-add", {
         categories,
-        campaigns
+        campaigns,
       });
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
-   
   },
   create: async (req, res) => {
-
     try {
       const { type, campaign, title, shortDescription, description, date } =
-      req.body;
+        req.body;
 
-      const newPost = new Post(
-        {
-          category : type,
-          campaign,
-          title: title.trim(),
-          shortDescription: shortDescription.trim(),
-          description: description.trim(),
-          date,
-          image: null,
-        }
-      );
+      const newPost = new Post({
+        category: type,
+        campaign,
+        title: title.trim(),
+        shortDescription: shortDescription.trim(),
+        description: description.trim(),
+        date,
+        image: null,
+      });
 
       const post = await newPost.save();
       return res.redirect(`/posts/${post.id}`);
-
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
- 
   },
   edit: async (req, res) => {
-
     try {
       const { post_id } = req.params;
-      const post = await Post.findById(post_id).populate('campaign').populate('category')
+      const post = await Post.findById(post_id)
+        .populate("campaign")
+        .populate("category");
+
+      const categories = await Category.find();
+      const campaigns = await Campaign.find();
+
       return res.render("post-edit", {
         post,
-        id: post.id,
+        categories,
+        campaigns,
       });
-
     } catch (error) {
-      console.log(error)
-      return res.redirect('/error')
+      console.log(error);
+      return res.redirect("/error");
     }
-
   },
-  update: (req, res) => {
-    const posts = getData("posts.json");
-
-    const { post_id } = req.params;
-    const { type, campaign, title, shortDescription, description, date } =
-      req.body;
-
-    const postsModified = posts.map((post) => {
-      if (post.id === +post_id) {
-        post = {
-          ...post,
-          type,
-          campaign,
+  update: async (req, res) => {
+    try {
+      const { post_id } = req.params;
+      const { type, campaign, title, shortDescription, description, date } =
+        req.body;
+      const postUpdated = await Post.findByIdAndUpdate(
+        post_id,
+        {
           title: title.trim(),
           shortDescription: shortDescription.trim(),
           description: description.trim(),
           date,
-          image: req.file ? `/images/${req.file.filename}` : post.image,
-        };
-      }
-      return post;
-    });
+          category: type,
+          campaign,
+        },
+        { new: true }
+      );
 
-    storeData(postsModified, "posts.json");
+      if (!postUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND");
 
-    return res.render("admin", {
-      posts: postsModified,
-    });
+      return res.redirect('/admin');
+    } catch (error) {
+      console.log(error);
+      return res.redirect("/error");
+    }
   },
   destroy: (req, res) => {
     const posts = getData("posts.json");

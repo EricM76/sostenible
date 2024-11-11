@@ -3,8 +3,12 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const app = express();
 const methodOverride = require('method-override');
-const session = require('express-session')
+const session = require('express-session');
+const morgan = require('morgan');
+
 const PORT = 3000;
+
+const connectDB = require("./config/connectDB.js");
 
 const indexRoutes = require('./routes/index.routes.js');
 const podcastRoutes = require('./routes/podcast.routes.js');
@@ -16,6 +20,9 @@ const volunteersRoutes = require('./routes/volunteers.routes.js')
 const usersRoutes = require('./routes/users.routes.js')
 
 const checkLocals = require('./middlewares/checklocals')
+
+//registro de peticiones
+app.use(morgan('short'));
 
 //configuración de los recursos estáticos
 app.use(express.static(path.join(__dirname,'..', 'public')));
@@ -35,6 +42,9 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
   }));
+
+//conexión con mongodb
+connectDB();
 
 app.use(checkLocals)
 

@@ -1,13 +1,9 @@
 const mongoose = require("mongoose");
 
-const campaingnSchema = new mongoose.Schema({
+const campaignSchema = new mongoose.Schema({
   name: String,
-  image: String,
   description : String,
-  area: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Area",
-  },
+  image: String,
 });
 
-module.exports = mongoose.model("Campaing", campaingnSchema);
+module.exports = mongoose.model("Campaign", campaignSchema);

@@ -1,105 +1,147 @@
-const { getData, storeData } = require("../data")
+const { getData, storeData } = require("../data");
+const Campaign = require("../models/Campaign.js");
+const Category = require("../models/Category.js");
+const Post = require("../models/Post.js");
 
 module.exports = {
-  activities: (req, res) => {
-    const posts = getData ("posts.json");
-    const activities  = posts.filter(post => post.type === "activity");
+  activities: async (req, res) => {
+    try {
+      const category = await Category.findOne({
+        name : 'Actividad'
+      })
+      const activities = await Post.find({
+        category : category.id
+      }).populate('category').populate('campaign')
+      return res.render("activities", { activities });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
+  
+  },
+  posts: async (req, res) => {
+    try {
+      const posts = await Post.find().populate('campaign').populate('category')
+      return res.render("posts", {
+        posts,
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
+   
+  },
+  detail: async (req, res) => {
+    try {
+      const { post_id } = req.params;
 
-    return res.render ("activities", { activities });
+      const post = await Post.findById(post_id).populate('campaign').populate('category')
+  
+      return res.render("post-detail", {
+        post,
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
   },
-  posts: (req, res) => {
-    const posts = getData("posts.json")
-    return res.render('posts', {
-      posts,
-    })
+  add: async (req, res) => {
+    try {
+      const categories = await Category.find();
+      const campaigns = await Campaign.find() ;
+
+      return res.render("post-add",{
+        categories,
+        campaigns
+      });
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
+   
   },
-  detail: (req, res) => {
+  create: async (req, res) => {
+
+    try {
+      const { type, campaign, title, shortDescription, description, date } =
+      req.body;
+
+      const newPost = new Post(
+        {
+          category : type,
+          campaign,
+          title: title.trim(),
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          date,
+          image: null,
+        }
+      );
+
+      const post = await newPost.save();
+      return res.redirect(`/posts/${post.id}`);
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
+ 
+  },
+  edit: async (req, res) => {
+
+    try {
+      const { post_id } = req.params;
+      const post = await Post.findById(post_id).populate('campaign').populate('category')
+      return res.render("post-edit", {
+        post,
+        id: post.id,
+      });
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/error')
+    }
+
+  },
+  update: (req, res) => {
     const posts = getData("posts.json");
-    const { post_id } = req.params;
-    const post = posts.find((post) => post.id === +post_id);
 
-    return res.render("post-detail", {
-      ...post,
+    const { post_id } = req.params;
+    const { type, campaign, title, shortDescription, description, date } =
+      req.body;
+
+    const postsModified = posts.map((post) => {
+      if (post.id === +post_id) {
+        post = {
+          ...post,
+          type,
+          campaign,
+          title: title.trim(),
+          shortDescription: shortDescription.trim(),
+          description: description.trim(),
+          date,
+          image: req.file ? `/images/${req.file.filename}` : post.image,
+        };
+      }
+      return post;
+    });
+
+    storeData(postsModified, "posts.json");
+
+    return res.render("admin", {
+      posts: postsModified,
     });
   },
-  add : (req,res) => {
- return res.render("post-add");
-  },
-  create : (req,res) => {
+  destroy: (req, res) => {
     const posts = getData("posts.json");
+    const { post_id } = req.params;
 
-    const { type, campaign, title, shortDescription, description, date } = req.body;
+    const postsModified = posts.filter((post) => post.id !== +post_id);
 
-    const newPost = {
-      id: +posts[posts.length - 1].id + 1,
-      type,
-      campaign,
-      title: title.trim(),
-      shortDescription:  shortDescription.trim(),
-      description: description.trim(),
-      date,
-      image: req.file ? `/images/${req.file.filename}` : "http://dummyimage.com/200x300.png/cc0000/ffffff",
-    };
-    posts.push(newPost);
-  
-      storeData(posts,'posts.json')
-  
-      //respuesta al cliente
-      return res.redirect(`/posts/${newPost.id}`)
+    storeData(postsModified, "posts.json");
+
+    return res.render("admin", {
+      posts: postsModified,
+    });
   },
-  edit: (req, res) => {
-    const posts = getData("posts.json");
-
-    const {post_id} = req.params;
-
-    const post = posts.find(post => post.id === +post_id)
-
-    return res.render("post-edit",{
-      post,
-      id:post.id
-    }
-    );
-  },
-  update : (req,res) => {
-    const posts = getData("posts.json");
-
-    const { post_id } = req.params
-    const {type, campaign, title,  shortDescription, description, date} = req.body
-
-
-    const postsModified = posts.map(post => {
-          if(post.id === +post_id){
-
-              post = {
-                ...post,
-                type,
-                campaign,
-                title: title.trim(),
-                shortDescription:  shortDescription.trim(),
-                description: description.trim(),
-                date,
-                image: req.file ? `/images/${req.file.filename}` : post.image
-              }
-          }
-          return post;
-    })
-
-    storeData(postsModified,'posts.json');
-
-    return res.render('admin',{
-      posts : postsModified
-    })
-  },
-    destroy : (req,res) => {
-      const posts = getData("posts.json");
-      const {post_id} = req.params
-  
-      const postsModified = posts.filter(post => post.id !== +post_id);
-  
-      storeData(postsModified,'posts.json');
-  
-      return res.render('admin',{
-        posts : postsModified
-      })
-    }
-  };
+};

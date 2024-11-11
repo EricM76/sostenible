@@ -7,25 +7,25 @@
             <div class="box-detail">
 
                 <h2 class="title-detail">
-                    <%= campaign %>
+                    <%= post.campaign.name %>
                 </h2>
 
-                <img src="<%= image %>" alt="Card image cap">
+                <img src="https://recursosnaturales.info/wp-content/uploads/2017/11/desarrollo-sustentable-y-sostenible-bck.jpg" alt="Card image cap">
 
                 <div class="box-description">
                     <h1 class="title-description">
-                        <%= title %>
+                        <%= post.title %>
                     </h1>
                     <div class="box-hr">
                         <hr>
                     </div>
                     <p>
-                        <%= description %>
+                        <%= post.description %>
                     </p>
                 </div>
                 
-                <% if (date) { %>
-                    <small class="date"><%= date %></small>
+                <% if (post.date) { %>
+                    <small class="date"><%= post.date %></small>
                     <% } %>
             </div>
         </main>

@@ -165,7 +165,7 @@
     padding: 5%;
     font-weight: 300;
     line-height: 200%;
-    margin:0 0 5%;
+    margin:0 0 2%;
     font-size:medium
 }
 
@@ -176,10 +176,54 @@
     flex-wrap: wrap;
 }
 
+.map__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 5px 0;
+    gap:5px;
+    margin-left: 45px;
+}
+
+.map__box--design {
+    position: relative;
+    background-color: rgba(51, 166, 166, 0.4);
+}
+
+.map__box iframe {
+    width: 100%;
+}
+
+.map__institucion {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    justify-content: center;
+    color:#f2f2f2;
+    font-size:xx-large;
+    font-weight: lighter;
+    line-height: 60px;
+    font-size: 20px;
+    padding: 50px;
+    text-align: justify;
+}
+
+.map__institucion--link {
+    color:#f2f2f2;
+    font-size: xx-large;
+    text-align: center;
+    border-radius: 25px;
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+    background-color: rgba(51, 166, 166, 0.8);
+    text-decoration: none;
+}
+
 .voluntario__box {
     margin: 5%;
     color:#f2f2f2;
-    background-color: rgba(51, 166, 166, 0.5);
+    background-color: rgba(51, 166, 166, 0.8);
     display: flex;
     flex-direction: column;
     text-align: center;

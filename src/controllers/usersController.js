@@ -1,6 +1,7 @@
 const {validationResult} = require('express-validator');
 const {hashSync, compareSync} = require('bcryptjs');
 const { getData, storeData } = require("../data");
+const User = require('../models/User.js');
 
 module.exports = {
     list: (req, res) => {
@@ -9,55 +10,67 @@ module.exports = {
     register: (req, res) => {
      return res.render ('register');
     },
-    processRegister: (req, res) => {
+    processRegister: async (req, res) => {
         const errors = validationResult(req);
-        const users = getData("users.json"); 
-        const { name, surname, email, pass,  } = req.body;
+        try {
+            const { name, surname, email, pass,  } = req.body;
+            
+            if(errors.isEmpty()){
 
-        if(errors.isEmpty()){
-        const newUser = {
-            id: +users[users.length - 1].id + 1,
-            name: name.trim(),
-            surname: surname.trim(),
-            rol: "admin",
-            email: email.trim(),
-            pass: hashSync(pass, 12),
-          }; 
-
-          users.push(newUser);
-
-          storeData(users, "users.json");
-          return res.redirect('/');
-        }else{
-            return res.render('register',{
-                old : req.body,
-                errors : errors.mapped()
-            })
+                const newUser = new User({
+                    name: name.trim(),
+                    surname: surname.trim(),
+                    rol: "admin",
+                    email: email.trim(),
+                    pass: hashSync(pass, 12),
+                })
+                    await newUser.save()
+             
+                  return res.redirect('/users/login');
+                }else{
+                    return res.render('register',{
+                        old : req.body,
+                        errors : errors.mapped()
+                    })
+                }
+        } catch (error) {
+            console.log(error)
+            return res.redirect('/error')
         }
+
+      
     },
     login: (req, res) => {
         return res.render('login')
     },
-    processLogin: (req, res) => {
-        const users = getData('users.json');
+    processLogin: async (req, res) => {
+        try {
+            const { email, pass } = req.body;
 
-        const { email, pass } = req.body;
+            const user = await User.findOne({
+                email,
+              });
 
-        const user = users.find(user => user.email == email)
+              if (user && compareSync(pass, user.pass)) {
+                req.session.userLogin = {
+                  id: user.id,
+                  name: user.name,
+                  rol: user.rol,
+                };
+        
+                return res.redirect("/admin")
+              } else {
+                return res.render('login', {
+                    msg: "Credenciales inválidas"
+                })
+              }
 
-        if (user && compareSync(pass, user.pass)) {
-            req.session.userLogin = {
-                id: user.id,
-                name: user.name,
-                rol: user.rol
-            };
-
-            return res.redirect('/')
-        } else {
-            return res.render('login', {
-                msg: "Credenciales inválidas"
-            })
+        } catch (error) {
+            console.log(error)
+            return res.redirect('/error')
         }
+
+
     },
     logout : (req,res) =>{
         req.session.destroy()

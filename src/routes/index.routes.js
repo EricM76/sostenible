@@ -9,5 +9,6 @@ router
     .get('/admin',checkAdmin, indexController.admin)
     .get('/about',indexController.about)
     .get('/contact',indexController.contact)
+    .get('/error', indexController.error)
 
 module.exports = router

@@ -121,7 +121,7 @@ module.exports = {
         { new: true }
       );
 
-      if (!postUpdated) throw new Error("ENTREPRENEURSHIP NOT FOUND");
+      if (!postUpdated) throw new Error("POST NOT FOUND");
 
       return res.redirect('/admin');
     } catch (error) {
@@ -129,16 +129,23 @@ module.exports = {
       return res.redirect("/error");
     }
   },
-  destroy: (req, res) => {
-    const posts = getData("posts.json");
-    const { post_id } = req.params;
+  destroy: async (req, res) => {
+    try {
+      const { post_id } = req.params;
 
-    const postsModified = posts.filter((post) => post.id !== +post_id);
+      const postDeleted = await Post.findByIdAndDelete(post_id);
+      if (!postDeleted) throw new Error("POST NOT FOUND");
 
-    storeData(postsModified, "posts.json");
 
-    return res.render("admin", {
-      posts: postsModified,
-    });
+      return res.redirect("/admin");
+
+    } catch (error) {
+      console.log(error);
+      return res.redirect("/error");
+    }
+
+
+
+  
   },
 };

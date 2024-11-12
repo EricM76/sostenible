@@ -1,0 +1,32 @@
+[
+    {
+      "name": "Hub Recircular",
+      "description": "El HUB Recircular:  es un espacio donde interactúan cooperativas, empresas, instituciones , ONGs, ciudadanos apoyando el recupero y el aumento de índices de reciclaje en la ciudad de Córdoba",
+      "image": null
+    },
+    {
+        "name": "Fundación DS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel mollis felis. Ut cursus sapien non tortor egestas, at aliquam.",
+        "image": null
+      },
+      {
+        "name": "Plantando Futuro",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel mollis felis. Ut cursus sapien non tortor egestas, at aliquam.",
+        "image": null
+      },
+      {
+        "name": "Green Drinks",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel mollis felis. Ut cursus sapien non tortor egestas, at aliquam.",
+        "image": null
+      },
+      {
+        "name": "Barrio Sustentable",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel mollis felis. Ut cursus sapien non tortor egestas, at aliquam.",
+        "image": null
+      },
+      {
+        "name": "ODS",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel mollis felis. Ut cursus sapien non tortor egestas, at aliquam.",
+        "image": null
+      }
+  ]

@@ -16,7 +16,7 @@
                 <!-- Sección de Novedades -->
                 <section class="section_novedades">
                     <div class="novedades_header">
-                        <h2 class="novedades_title">Novedades</h2>
+                        <h2 class="novedades_title">Publicaciones</h2>
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="/posts/add"><button class="btn btn-outline-dark" type="button"
                                     >Añadir</button></a>
@@ -24,14 +24,14 @@
                     </div>
                     <!-- Novedades -->
                     <article class="cards_novedades">
-                        <% posts.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+                        <% posts.forEach(({id, image, title, shortDescription, category, campaign, date})=> { %>
                             <div class="card">
                                 <div class="card--body">
                                     <div class="box--card_img">
-                                        <p>id : <%= id %>
+                                        <p>Tipo : <%= category.name %>
                                         </p>
 
-                                        <img src="<%= image %>" class="card-img-top" alt="Imagen de la novedad">
+                                        <img src="https://www.zonanorteambiental.com.ar//wp-content/uploads/2020/03/1582726204.jpeg" class="card-img-top" alt="Imagen de la novedad">
                                     </div>
                                     <h5 class="card-title">
                                         <%= title %>
@@ -40,7 +40,7 @@
                                         <%= shortDescription %>
                                     </p>
                                     <h5>
-                                        <%= campaign %>
+                                        <%= campaign.name %>
                                     </h5>
                                     <% if (date) { %>
                                         <small class="date">
@@ -66,7 +66,7 @@
                                 <div class="modal-dialog modal-dialog-centered">
                                     <div class="modal-content">
                                         <div class="modal-body">
-                                            <h4 class="text-center">¿Estás seguro de eliminar el producto?</h4>
+                                            <h4 class="text-center">¿Estás seguro de eliminar la publicación?</h4>
                                             <form method="POST" action="/posts/destroy/<%= id %>?_method=DELETE">
                                                 <div class="d-flex justify-content-center gap-3">
                                                     <button type="button" class="btn btn-secondary"

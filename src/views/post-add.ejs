@@ -15,10 +15,10 @@
                             <div class="mb-4">
                                 <label for="type" class="form-label">Tipo del anuncio</label>
                                 <select id="type" name="type" class="form-control" required>
-                                    <option value="" disabled selected>Seleccione un tipo</option>
-                                    <option value="post">Anuncio</option>
-                                    <option value="activity">Actividad</option>
-                                    <option value="training">Capacitación</option>
+                                    <option value="" hidden selected>Seleccione...</option>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id %>"><%= category.name %></option>
+                                    <% }) %>
                                 </select>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
@@ -26,13 +26,10 @@
                             <div class="mb-4">
                                 <label for="campaign" class="form-label">Campaña</label>
                                 <select id="campaign" name="campaign" class="form-control" required>
-                                    <option value="" disabled selected>Seleccione un tipo</option>
-                                    <option value="FUNDACION DS">Fundación DS</option>
-                                    <option value="PLANTANDO FUTURO">Plantando Futuro</option>
-                                    <option value="HUB RECIRCULAR">Hub recircular</option>
-                                    <option value="GREEN DRINKS">Green Drinks</option>
-                                    <option value="BARRIO SUSTENTABLE">Barrio Sustentable</option>
-                                    <option value="ODS">ODS</option>
+                                    <option value="" hidden selected>Seleccione...</option>
+                                    <% campaigns.forEach(({name, id}) => { %>
+                                        <option value="<%= id %>"><%= name %></option>
+                                    <% }) %>
                                 </select>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>

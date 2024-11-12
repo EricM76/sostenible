@@ -9,29 +9,25 @@
 <main>
                 <div class="card__form--add">
                         <h4 class="text-center">Editar</h4>
-                        <form method="POST" action="/posts/update/<%= id %>?_method=PUT" enctype="multipart/form-data">
+                        <form method="POST" action="/posts/update/<%= post.id %>?_method=PUT" enctype="multipart/form-data">
                             <div class="post__form--add">
                             <div class="mb-4">
                                 
                                 <label for="type" class="form-label">Tipo del anuncio</label>
                                 <select id="type" name="type" class="form-control" required>
-                                    <option value="" disabled selected>Seleccione un tipo</option>
-                                    <option value="post" <%= post.type === 'post' ? 'selected' : '' %>>Anuncio</option>
-                                    <option value="activity" <%= post.type === 'activity' ? 'selected' : '' %>>Actividad</option>
-                                    <option value="training" <%= post.type === 'training' ? 'selected' : '' %>>Capacitación</option>
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.id %>" <%= category.id == post.category && 'selected' %>><%= category.name %></option>
+                                    <% }) %>
                                 </select>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>
                             <div class="mb-4">
                                 <label for="campaign" class="form-label">Campaña</label>
                                 <select id="campaign" name="campaign" class="form-control" required>
-                                    <option value="" disabled selected>Seleccione un tipo</option>
-                                    <option value="FUNDACION DS" <%= post.campaign === 'FUNDACION DS' ? 'selected' : '' %>>Fundación DS</option>
-                                    <option value="PLANTANDO FUTURO" <%= post.campaign === 'PLANTANDO FUTURO' ? 'selected' : '' %>>Plantando Futuro</option>
-                                    <option value="HUB RECIRCULAR" <%= post.campaign === 'HUB RECIRCULAR' ? 'selected' : '' %>>Hub recircular</option>
-                                    <option value="GREEN DRINKS" <%= post.campaign === 'GREEN DRINKS' ? 'selected' : '' %>>Green Drinks</option>
-                                    <option value="BARRIO SUSTENTABLE" <%= post.campaign === 'BARRIO SUSTENTABLE' ? 'selected' : '' %>>Barrio Sustentable</option>
-                                    <option value="ODS" <%= post.campaign === 'ODS' ? 'selected' : '' %>>ODS</option>
+                                    <% campaigns.forEach(({name, id}) => { %>
+                                        <option value="<%= id %>" <%= id == post.campaign && 'selected' %>><%= name %></option>
+                                    <% }) %>
+                                </select>
                                 </select>
                                 <p class="form-text alert-hide">Obligatorio</p>
                             </div>

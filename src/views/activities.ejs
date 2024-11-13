@@ -13,7 +13,7 @@
               <a href="/posts/<%= id %>">
 
                 <div class="card--section">
-                  <img src="<%= image %>" alt="Card image cap">
+                  <img src="http://localhost:3000/images/image-1730755723452.png" alt="Card image cap">
                   <div class="card-body">
                     <h2 class="card-title">
                       <%= title %>
@@ -29,7 +29,7 @@
               </a>
               <div class="card-footer">
                 <h3>
-                  <%= campaign %>
+                  <%= campaign.name %>
                 </h3>
                 <% if (date) { %>
                   <small class="date"><%= date %></small>
@@ -42,19 +42,19 @@
           <h1>Actividades Pasadas</h1>
         </div>
         <div class="cards--container">
-          <% activities.forEach(({id, image, title, shortDescription, campaign, date})=> { %>
+          <% activities.forEach(({id, image, title, shortDescription, description, campaign, date})=> { %>
             <div class="actividad--card">
               <a href="/posts/<%= id %>">
 
                 <div class="card--section">
-                  <img src="<%= image %>" alt="Card image cap">
+                  <img src="http://localhost:3000/images/image-1730755244527.png" alt="Card image cap">
                   <div class="card-body">
                     <h2 class="card-title">
                       <%= title %>
                     </h2>
                     <div class="card__container--p">
                       <p>
-                        <%= shortDescription %>
+                        <%= shortDescription ? shortDescription : description %>
                       </p>
                     </div>
 
@@ -63,7 +63,7 @@
               </a>
               <div class="card-footer">
                 <h3>
-                  <%= campaign %>
+                  <%= campaign.name %>
                 </h3>
                 <% if (date) { %>
                   <small class="date"><%= date %></small>

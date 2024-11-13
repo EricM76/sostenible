@@ -2,6 +2,9 @@ const { getData, storeData } = require("../data");
 const Campaign = require("../models/Campaign.js");
 const Category = require("../models/Category.js");
 const Post = require("../models/Post.js");
+const cloudinary = require('cloudinary').v2;
+const { format } = require('date-fns');
+const { es } = require('date-fns/locale');
 
 module.exports = {
   activities: async (req, res) => {
@@ -14,7 +17,23 @@ module.exports = {
       })
         .populate("category")
         .populate("campaign");
-      return res.render("activities", { activities });
+
+        const currentDate = new Date();
+
+        const futureActivities = activities.filter(activity => new Date(activity.date) > currentDate);
+        const pastActivities = activities.filter(activity => new Date(activity.date) <= currentDate);
+    
+       futureActivities.forEach(activity => {
+      activity.formattedDate = format(new Date(activity.date), "EEEE dd 'de' MMMM", { locale: es });
+    });
+
+    pastActivities.forEach(activity => {
+      activity.formattedDate = format(new Date(activity.date), "EEEE dd 'de' MMMM", { locale: es });
+    });
+        return res.render("activities", {
+          futureActivities,
+          pastActivities,
+        });
     } catch (error) {
       console.log(error);
       return res.redirect("/error");
@@ -22,7 +41,14 @@ module.exports = {
   },
   posts: async (req, res) => {
     try {
-      const posts = await Post.find().populate("campaign").populate("category");
+      const posts = await Post.find().sort({date : 1}).populate("campaign").populate("category");
+
+      posts.forEach(post => {
+        if (post.date) {
+        post.formattedDate = format(new Date(post.date), "EEEE dd 'de' MMMM", { locale: es });
+        }
+      });
+
       return res.render("posts", {
         posts,
       });
@@ -63,8 +89,14 @@ module.exports = {
   },
   create: async (req, res) => {
     try {
+      
       const { type, campaign, title, shortDescription, description, date } =
         req.body;
+        let imageUrl = null;
+        if (req.file) {
+          const result = await cloudinary.uploader.upload(req.file.path);
+          imageUrl = result.secure_url;
+        }
 
       const newPost = new Post({
         category: type,
@@ -73,7 +105,7 @@ module.exports = {
         shortDescription: shortDescription.trim(),
         description: description.trim(),
         date,
-        image: null,
+        image: imageUrl,
       });
 
       const post = await newPost.save();
@@ -108,6 +140,17 @@ module.exports = {
       const { post_id } = req.params;
       const { type, campaign, title, shortDescription, description, date } =
         req.body;
+        let imageUrl = null;
+        const existingPost = await Post.findById(post_id);
+    if (!existingPost) throw new Error("POST NOT FOUND");
+
+    if (req.file) {
+      const result = await cloudinary.uploader.upload(req.file.path);
+      imageUrl = result.secure_url; 
+    } else {
+          imageUrl = existingPost.image;
+        }
+
       const postUpdated = await Post.findByIdAndUpdate(
         post_id,
         {
@@ -117,6 +160,7 @@ module.exports = {
           date,
           category: type,
           campaign,
+          image: imageUrl
         },
         { new: true }
       );

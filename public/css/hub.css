@@ -67,7 +67,7 @@
     margin: 0 5% 2% 5%
 }
 
-.column__container {
+.hub__column--container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -83,7 +83,7 @@
     text-align: right;
 }
 
-.row__container  {
+.hub__row--container  {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

@@ -24,27 +24,27 @@
                     </div>
                     <!-- Novedades -->
                     <article class="cards_novedades">
-                        <% posts.forEach(({id, image, title, shortDescription, category, campaign, date})=> { %>
+                        <% posts.forEach(({id, image, title, shortDescription, description, category, campaign, formattedDate, date})=> { %>
                             <div class="card">
                                 <div class="card--body">
                                     <div class="box--card_img">
                                         <p>Tipo : <%= category.name %>
                                         </p>
 
-                                        <img src="https://www.zonanorteambiental.com.ar//wp-content/uploads/2020/03/1582726204.jpeg" class="card-img-top" alt="Imagen de la novedad">
+                                        <img src="<%= image %>" class="card-img-top" alt="Imagen de la novedad">
                                     </div>
                                     <h5 class="card-title">
                                         <%= title %>
                                     </h5>
                                     <p class="card-text">
-                                        <%= shortDescription %>
+                                        <%= shortDescription ? shortDescription : description %>
                                     </p>
                                     <h5>
                                         <%= campaign.name %>
                                     </h5>
                                     <% if (date) { %>
                                         <small class="date">
-                                            <%= date %>
+                                            <%= formattedDate %>
                                         </small>
                                         <% } %>
                                 </div>

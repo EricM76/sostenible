@@ -5,6 +5,7 @@ const app = express();
 const methodOverride = require('method-override');
 const session = require('express-session');
 const morgan = require('morgan');
+const cloudinary = require('cloudinary');
 
 const PORT = 3000;
 
@@ -43,6 +44,12 @@ app.use(session({
     saveUninitialized: true,
   }));
 
+//configuracion de cloudinary
+cloudinary.config({ 
+  cloud_name: 'dey3qrctn', 
+  api_key: '245118983174434', 
+  api_secret: 'ECjjzFvLcZKaahGpO1WvqtgynoU'
+});  
 //conexión con mongodb
 connectDB();
 

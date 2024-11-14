@@ -18,9 +18,14 @@
 
 .actividades--header {
     background-color: rgba(51, 166, 166, 1);
-    margin: 5px 0 0;
     color: #ffff;
-    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.title_header {
+    margin: 5px 5px 5px 15px;
 }
 
 .cards--container {
@@ -125,9 +130,11 @@
     .actividad--card {
         width: 30%;
     }
-
-    .actividades--header {
-        margin: 0;
+    .actividades--header{
+        border-radius: 10px;
+        padding: 2px;
+        margin-bottom: 0;
+        justify-content: start;
     }
 
     .container--h1 {

@@ -27,7 +27,7 @@
               <div class="carousel--title">
                 <a href="/posts/<%= post.id %>">
                   <p class="home__novedad"><%= post.title %></p>
-                  <p class="home__novedad--campaña"><%= post.campaign %></p>
+                  <p class="home__novedad--campaña"><%= post.shortDescription ? post.shortDescription : post.description %></p>
                 </a>
               </div>
             </div>
@@ -87,6 +87,14 @@
         <div class="counter">
           <h3>43</h3>
           <h4>VIVEROS INSTALADOS</h4>
+        </div></a>
+      </div>
+      <div class="counter--colaborations">
+        <a href="">
+        <h2>COLABORADORES</h2>
+        <div class="counter">
+          <h3>3000</h3>
+          <h4>PERSONAS QUE NOS COLABORAN</h4>
         </div></a>
       </div>
       </div>

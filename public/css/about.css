@@ -63,9 +63,9 @@
 }
 
 .about__insert--row {
- /*    display: flex;
+     display: flex;
     flex-direction: row-reverse;
-    justify-content:space-around; */
+    justify-content:space-around;
     position: relative;
     padding-right: 50px;
     justify-content: baseline;
@@ -97,13 +97,13 @@
 
 .about__insert--video-box {
     display: flex;
-    
+    flex-direction: column;
     justify-content: center;
     background-color: #734930;
     color: #f2f2f2;
     font-size: 180%;
     border-radius: 30px;
-    margin: 100px;
+    margin: 80px 600px;
     height: 500px;
     padding: 30px;
     gap: 5px
@@ -114,4 +114,17 @@
 .about__insert--video-box p{
     text-align: center;
     align-items: center;
+}
+
+.personal__box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(75, 141, 127, 0.8);
+    gap: 10px
+}
+
+.personal__box{
+    display: flex;
+    flex-direction: row;
 }

@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -7,7 +8,7 @@ const session = require('express-session');
 const morgan = require('morgan');
 const cloudinary = require('cloudinary');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const connectDB = require("./config/connectDB.js");
 
@@ -46,9 +47,9 @@ app.use(session({
 
 //configuracion de cloudinary
 cloudinary.config({ 
-  cloud_name: 'dey3qrctn', 
-  api_key: '245118983174434', 
-  api_secret: 'ECjjzFvLcZKaahGpO1WvqtgynoU'
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
+  api_key: process.env.CLOUDINARY_API_KEY, 
+  api_secret: process.env.CLOUDINARY_API_SECRET
 });  
 //conexión con mongodb
 connectDB();
